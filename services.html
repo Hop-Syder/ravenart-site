@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services — RavenArt | Agence Audiovisuelle Premium</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="container navbar__container">
+            <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
+                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" style="height: 60px; width: auto;">
+            </a>
+
+            <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar__menu">
+                <li><a href="/" class="navbar__link">Accueil</a></li>
+                <li><a href="/services.html" class="navbar__link navbar__link--active">Services</a></li>
+                <li><a href="/projects.html" class="navbar__link">Nos Projets</a></li>
+                <li><a href="/about.html" class="navbar__link">À Propos</a></li>
+                <li><a href="/contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="/public/video-mobile/ravenart.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content" style="margin-top: var(--space-2xl);">
+            <h1 class="hero__title">Nos Services</h1>
+            <p class="hero__subtitle">Excellence audiovisuelle noir & blanc</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid--2">
+                <article class="card">
+                    <h3 class="card__title">Production Vidéo Corporate</h3>
+                    <p class="card__text">Films d'entreprise haut de gamme capturant l'essence de votre marque avec une
+                        esthétique cinématographique noir & blanc. De la conception à la post-production, nous créons
+                        des récits visuels puissants.</p>
+                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                        <li>Films institutionnels</li>
+                        <li>Vidéos de présentation produit</li>
+                        <li>Reportages corporate</li>
+                        <li>Contenus pour réseaux sociaux</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Publicité & Brand Content</h3>
+                    <p class="card__text">Spots publicitaires et contenus de marque qui se démarquent par leur
+                        sophistication visuelle. Chaque frame est pensé comme une œuvre d'art monochrome.</p>
+                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                        <li>Spots TV & digital</li>
+                        <li>Campaignes brandées</li>
+                        <li>Séries de contenu</li>
+                        <li>Motion design premium</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Photographie Artistique</h3>
+                    <p class="card__text">Portraits et reportages photographiques en noir & blanc qui transcendent le
+                        temps. Notre approche artistique transforme chaque instant en image intemporelle.</p>
+                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                        <li>Portraits professionnels</li>
+                        <li>Couverture d'événements</li>
+                        <li>Photographie de mode</li>
+                        <li>Lookbooks & éditoriaux</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Direction Artistique</h3>
+                    <p class="card__text">Conception visuelle complète pour projets ambitieux. Nous définissons
+                        l'identité visuelle de vos productions avec une cohérence esthétique irréprochable.</p>
+                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                        <li>Identité visuelle de projet</li>
+                        <li>Styling & art direction</li>
+                        <li>Supervision créative</li>
+                        <li>Consulting esthétique</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Post-Production Cinéma</h3>
+                    <p class="card__text">Étalonnage noir & blanc expert, montage narratif et finition professionnelle.
+                        Chaque détail est peaufiné pour atteindre la perfection visuelle.</p>
+                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                        <li>Étalonnage B&W cinéma</li>
+                        <li>Montage narratif</li>
+                        <li>Sound design</li>
+                        <li>Color grading avancé</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Couverture Événementielle</h3>
+                    <p class="card__text">Captation vidéo et photo de vos événements avec une approche documentaire
+                        artistique. Galas, conférences, lancements — immortalisés avec élégance.</p>
+                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                        <li>Événements corporate</li>
+                        <li>Galas & cérémonies</li>
+                        <li>Lancements de produits</li>
+                        <li>Conférences & panels</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section--alternate">
+        <div class="container container--narrow">
+            <h2 class="text-center" style="margin-bottom: var(--space-xl);">Notre Méthode</h2>
+
+            <div class="grid grid--4" style="text-align: center;">
+                <div>
+                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">01</h4>
+                    <h5>Découverte</h5>
+                    <p class="text-muted" style="font-size: var(--text-sm);">Brief approfondi et compréhension de votre
+                        vision</p>
+                </div>
+
+                <div>
+                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">02</h4>
+                    <h5>Conception</h5>
+                    <p class="text-muted" style="font-size: var(--text-sm);">Scénarisation et direction artistique sur
+                        mesure</p>
+                </div>
+
+                <div>
+                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">03</h4>
+                    <h5>Production</h5>
+                    <p class="text-muted" style="font-size: var(--text-sm);">Tournage professionnel avec équipement
+                        cinéma</p>
+                </div>
+
+                <div>
+                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">04</h4>
+                    <h5>Post-Production</h5>
+                    <p class="text-muted" style="font-size: var(--text-sm);">Montage, étalonnage B&W et livraison
+                        premium</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 style="margin-bottom: var(--space-md);">Prêt à créer quelque chose d'exceptionnel ?</h2>
+            <p style="margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+                Discutons de votre projet et donnons vie à votre vision avec l'excellence RavenArt.</p>
+            <a href="/contact.html" class="btn btn--primary">Démarrer un projet</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>RavenArt</h4>
+                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir & blanc.</p>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/about.html">À Propos</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contact</h4>
+                    <p>Cotonou, Bénin</p>
+                    <a href="mailto:contact@ravenart.bj">contact@ravenart.bj</a>
+                    <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

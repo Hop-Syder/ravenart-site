@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Projets — RavenArt | Portfolio Vidéo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="container navbar__container">
+            <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
+                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" style="height: 60px; width: auto;">
+            </a>
+
+            <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar__menu">
+                <li><a href="/" class="navbar__link">Accueil</a></li>
+                <li><a href="/services.html" class="navbar__link">Services</a></li>
+                <li><a href="/projects.html" class="navbar__link navbar__link--active">Nos Projets</a></li>
+                <li><a href="/about.html" class="navbar__link">À Propos</a></li>
+                <li><a href="/contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content" style="margin-top: var(--space-2xl);">
+            <h1 class="hero__title">Nos Projets</h1>
+            <p class="hero__subtitle">Portfolio vidéo noir & blanc</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section" style="padding-top: var(--space-lg); padding-bottom: var(--space-lg);">
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;" role="group"
+                aria-label="Filtrer les projets">
+                <button class="btn btn--primary filter-btn" data-filter="all" aria-pressed="true">Tous les
+                    Projets</button>
+                <button class="btn btn--secondary filter-btn" data-filter="evenementiel"
+                    aria-pressed="false">Événementiel</button>
+                <button class="btn btn--secondary filter-btn" data-filter="branding" aria-pressed="false">Branding
+                    Video</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desktop View Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <h2 style="margin-bottom: var(--space-xl); text-align: center;">Vue Desktop</h2>
+
+            <div class="grid grid--2" id="desktop-videos">
+                <!-- Événementiel Videos -->
+                <article class="video-card" data-category="evenementiel">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Vidéo Événementiel 1</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Gala Corporate 2025</h3>
+                        <p class="video-card__category text-accent">Événementiel</p>
+                        <p class="video-card__description">Captation complète d'un gala d'entreprise avec approche
+                            cinématographique noir & blanc.</p>
+                    </div>
+                </article>
+
+                <article class="video-card" data-category="branding">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Vidéo Branding 1</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Identité Visuelle Luxe</h3>
+                        <p class="video-card__category text-accent">Branding Video</p>
+                        <p class="video-card__description">Film de marque pour une maison de luxe, esthétique
+                            minimaliste intemporelle.</p>
+                    </div>
+                </article>
+
+                <article class="video-card" data-category="evenementiel">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Vidéo Événementiel 2</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Conférence Innovation</h3>
+                        <p class="video-card__category text-accent">Événementiel</p>
+                        <p class="video-card__description">Couverture vidéo d'une conférence tech avec storytelling
+                            visuel premium.</p>
+                    </div>
+                </article>
+
+                <article class="video-card" data-category="branding">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Vidéo Branding 2</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Campagne Publicitaire</h3>
+                        <p class="video-card__category text-accent">Branding Video</p>
+                        <p class="video-card__description">Spot publicitaire noir & blanc pour lancement de produit haut
+                            de gamme.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile View Section -->
+    <section class="section section--alternate">
+        <div class="container">
+            <h2 style="margin-bottom: var(--space-xl); text-align: center;">Vue Mobile</h2>
+
+            <div class="grid grid--2" id="mobile-videos">
+                <!-- Événementiel Videos - Mobile Format -->
+                <article class="video-card" data-category="evenementiel">
+                    <div class="video-placeholder video-placeholder--mobile">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Format Vertical</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Story Instagram Événement</h3>
+                        <p class="video-card__category text-accent">Événementiel</p>
+                        <p class="video-card__description">Contenu vertical optimisé pour réseaux sociaux, format story
+                            Instagram.</p>
+                    </div>
+                </article>
+
+                <article class="video-card" data-category="branding">
+                    <div class="video-placeholder video-placeholder--mobile">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Format Vertical</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Reel TikTok Marque</h3>
+                        <p class="video-card__category text-accent">Branding Video</p>
+                        <p class="video-card__description">Vidéo branding verticale pour TikTok, esthétique monochrome
+                            impactante.</p>
+                    </div>
+                </article>
+
+                <article class="video-card" data-category="evenementiel">
+                    <div class="video-placeholder video-placeholder--mobile">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Format Vertical</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Behind The Scenes</h3>
+                        <p class="video-card__category text-accent">Événementiel</p>
+                        <p class="video-card__description">Coulisses d'événement en format vertical, immersion
+                            authentique.</p>
+                    </div>
+                </article>
+
+                <article class="video-card" data-category="branding">
+                    <div class="video-placeholder video-placeholder--mobile">
+                        <div class="video-placeholder__icon">▶</div>
+                        <p class="video-placeholder__text">Format Vertical</p>
+                    </div>
+                    <div class="video-card__info">
+                        <h3 class="video-card__title">Teaser Produit Mobile</h3>
+                        <p class="video-card__category text-accent">Branding Video</p>
+                        <p class="video-card__description">Teaser vertical pour lancement produit, optimisé mobile
+                            first.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 style="margin-bottom: var(--space-md);">Vous avez un projet vidéo ?</h2>
+            <p style="margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+                Transformons votre vision en réalité cinématographique noir & blanc.</p>
+            <a href="/contact.html" class="btn btn--primary">Démarrer un projet</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>RavenArt</h4>
+                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir & blanc.</p>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/projects.html">Nos Projets</a>
+                    <a href="/about.html">À Propos</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contact</h4>
+                    <p>Cotonou, Bénin</p>
+                    <a href="mailto:contact@ravenart.bj">contact@ravenart.bj</a>
+                    <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        // Video Filtering Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const allVideoCards = document.querySelectorAll('.video-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterValue = button.getAttribute('data-filter');
+
+                // Update button states
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('btn--primary');
+                    btn.classList.add('btn--secondary');
+                    btn.setAttribute('aria-pressed', 'false');
+                });
+                button.classList.remove('btn--secondary');
+                button.classList.add('btn--primary');
+                button.setAttribute('aria-pressed', 'true');
+
+                // Filter videos
+                allVideoCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+
+                    if (filterValue === 'all' || category === filterValue) {
+                        card.style.display = 'block';
+                        // Add fade-in animation
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.3s ease';
+                            card.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
