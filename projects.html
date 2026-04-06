@@ -22,7 +22,7 @@
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
             <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
-                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" style="height: 60px; width: auto;">
+                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
             </a>
 
             <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
@@ -42,23 +42,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 60vh;">
+    <section class="hero hero--short">
         <video class="hero__video" autoplay muted loop playsinline>
             <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
 
-        <div class="hero__content" style="margin-top: var(--space-2xl);">
+        <div class="hero__content hero__content--offset">
             <h1 class="hero__title">Nos Projets</h1>
             <p class="hero__subtitle">Portfolio vidéo noir & blanc</p>
         </div>
     </section>
 
     <!-- Filter Section -->
-    <section class="section" style="padding-top: var(--space-lg); padding-bottom: var(--space-lg);">
+    <section class="section section--tight">
         <div class="container">
-            <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;" role="group"
-                aria-label="Filtrer les projets">
+            <div class="filter-bar" role="group" aria-label="Filtrer les projets">
                 <button class="btn btn--primary filter-btn" data-filter="all" aria-pressed="true">Tous les
                     Projets</button>
                 <button class="btn btn--secondary filter-btn" data-filter="evenementiel"
@@ -70,11 +69,15 @@
     </section>
 
     <!-- Desktop View Section -->
-    <section class="section" style="padding-top: 0;">
+    <section class="section section--flush-top">
         <div class="container">
-            <h2 style="margin-bottom: var(--space-xl); text-align: center;">Vue Desktop</h2>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Horizontal</span>
+                <h2 class="section-intro__title">Vue Desktop</h2>
+                <p class="section-intro__lead">Des formats larges, pensés comme des affiches animées plutôt que comme de simples miniatures.</p>
+            </div>
 
-            <div class="grid grid--2" id="desktop-videos">
+            <div class="grid grid--2 grid--staggered" id="desktop-videos">
                 <!-- Événementiel Videos -->
                 <article class="video-card" data-category="evenementiel">
                     <div class="video-placeholder">
@@ -134,9 +137,13 @@
     <!-- Mobile View Section -->
     <section class="section section--alternate">
         <div class="container">
-            <h2 style="margin-bottom: var(--space-xl); text-align: center;">Vue Mobile</h2>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Vertical</span>
+                <h2 class="section-intro__title">Vue Mobile</h2>
+                <p class="section-intro__lead">Une seconde cadence visuelle, plus étroite, plus directe, pensée pour les usages sociaux et les écrans verticaux.</p>
+            </div>
 
-            <div class="grid grid--2" id="mobile-videos">
+            <div class="grid grid--2 grid--staggered" id="mobile-videos">
                 <!-- Événementiel Videos - Mobile Format -->
                 <article class="video-card" data-category="evenementiel">
                     <div class="video-placeholder video-placeholder--mobile">
@@ -196,9 +203,11 @@
     <!-- CTA Section -->
     <section class="section">
         <div class="container text-center">
-            <h2 style="margin-bottom: var(--space-md);">Vous avez un projet vidéo ?</h2>
-            <p style="margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
-                Transformons votre vision en réalité cinématographique noir & blanc.</p>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Projection</span>
+                <h2 class="section-intro__title">Vous avez un projet vidéo ?</h2>
+                <p class="section-intro__lead">Transformons votre vision en réalité cinématographique noir & blanc.</p>
+            </div>
             <a href="/contact.html" class="btn btn--primary">Démarrer un projet</a>
         </div>
     </section>
@@ -230,7 +239,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés.</p>
+                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
             </div>
         </div>
     </footer>
@@ -260,17 +269,21 @@
                     const category = card.getAttribute('data-category');
 
                     if (filterValue === 'all' || category === filterValue) {
-                        card.style.display = 'block';
-                        // Add fade-in animation
-                        card.style.opacity = '0';
-                        setTimeout(() => {
-                            card.style.transition = 'opacity 0.3s ease';
-                            card.style.opacity = '1';
-                        }, 50);
+                        card.classList.remove('video-card--hidden');
+                        card.classList.remove('video-card--filtered-in');
+                        void card.offsetWidth;
+                        card.classList.add('video-card--filtered-in');
                     } else {
-                        card.style.display = 'none';
+                        card.classList.remove('video-card--filtered-in');
+                        card.classList.add('video-card--hidden');
                     }
                 });
+            });
+        });
+
+        allVideoCards.forEach(card => {
+            card.addEventListener('animationend', () => {
+                card.classList.remove('video-card--filtered-in');
             });
         });
     </script>

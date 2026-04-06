@@ -22,7 +22,7 @@
   <nav class="navbar" role="navigation" aria-label="Navigation principale">
     <div class="container navbar__container">
       <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
-        <img src="/public/logo-ravenart.png" alt="RavenArt Logo" style="height: 60px; width: auto;">
+        <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
       </a>
 
       <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
@@ -52,7 +52,7 @@
       <h1 class="hero__title">RAVENART</h1>
       <p class="hero__subtitle">Agence Audiovisuelle</p>
 
-      <div class="hero__cta" style="margin-top: var(--space-xl);">
+      <div class="hero__cta">
         <a href="/services.html" class="btn btn--primary">Découvrir nos services</a>
         <a href="/contact.html" class="btn btn--secondary">Nous contacter</a>
       </div>
@@ -62,27 +62,49 @@
   <!-- Services Preview Section -->
   <section class="section section--alternate">
     <div class="container">
-      <h2 class="text-center" style="margin-bottom: var(--space-xl);">Nos Expertises</h2>
+      <div class="section-intro section-intro--center">
+        <span class="section-intro__eyebrow">Savoir-faire</span>
+        <h2 class="section-intro__title">Nos Expertises</h2>
+        <p class="section-intro__lead">Trois registres créatifs, trois rythmes d'exécution, une même exigence cinématographique.</p>
+      </div>
 
-      <div class="grid grid--3">
-        <article class="card">
+      <div class="grid grid--3 grid--staggered">
+        <article class="card card--feature">
+          <span class="card__kicker">Signature</span>
           <h3 class="card__title">Production Vidéo</h3>
           <p class="card__text">Films corporate, publicités et contenus cinématographiques en noir & blanc d'exception.
           </p>
+          <ul class="card__meta-list">
+            <li>Films de marque</li>
+            <li>Campagnes premium</li>
+            <li>Formats longs et courts</li>
+          </ul>
         </article>
 
-        <article class="card">
+        <article class="card card--outlined">
+          <span class="card__kicker">Présence</span>
           <h3 class="card__title">Photographie Artistique</h3>
           <p class="card__text">Portraits, événements et storytelling visuel avec une esthétique intemporelle.</p>
+          <ul class="card__meta-list">
+            <li>Portraits éditoriaux</li>
+            <li>Textures de lumière</li>
+            <li>Récits visuels durables</li>
+          </ul>
         </article>
 
-        <article class="card">
+        <article class="card card--minimal">
+          <span class="card__kicker">Vision</span>
           <h3 class="card__title">Direction Artistique</h3>
           <p class="card__text">Conception visuelle premium pour marques exigeantes recherchant l'excellence.</p>
+          <ul class="card__meta-list">
+            <li>Univers de campagne</li>
+            <li>Supervision créative</li>
+            <li>Cadres visuels cohérents</li>
+          </ul>
         </article>
       </div>
 
-      <div class="text-center" style="margin-top: var(--space-xl);">
+      <div class="text-center">
         <a href="/services.html" class="btn btn--secondary">Voir tous les services</a>
       </div>
     </div>
@@ -91,26 +113,41 @@
   <!-- Portfolio Preview -->
   <section class="section">
     <div class="container">
-      <h2 class="text-center" style="margin-bottom: var(--space-xl);">Réalisations Récentes</h2>
+      <div class="section-intro">
+        <span class="section-intro__eyebrow">En lumière</span>
+        <h2 class="section-intro__title">Réalisations Récentes</h2>
+        <p class="section-intro__lead">Des cadres plus éditoriaux, avec un jeu de tailles et de rythmes moins mécanique que la simple grille 2 colonnes.</p>
+      </div>
 
-      <div class="grid grid--2">
-        <div class="card"
-          style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background-color: var(--bg-secondary); overflow: hidden;">
-          <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
-            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
-        </div>
-        <div class="card"
-          style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background-color: var(--bg-secondary); overflow: hidden;">
-          <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
-            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
+      <div class="project-preview-grid">
+        <article class="project-preview-card">
+          <div class="project-preview-card__body">
+            <span class="project-preview-card__label">Campagne</span>
+            <h3 class="project-preview-card__title">Narration de marque à fort contraste</h3>
+            <p class="project-preview-card__text">Une écriture visuelle pensée comme un film court, entre silence, regard et matière.</p>
+          </div>
+        </article>
+
+        <div class="project-preview-stack">
+          <article class="project-preview-card project-preview-card--compact">
+            <div class="project-preview-card__body">
+              <span class="project-preview-card__label">Événement</span>
+              <h3 class="project-preview-card__title">Couverture de gala</h3>
+              <p class="project-preview-card__text">Rythme documentaire, silhouettes fortes et captation élégante.</p>
+            </div>
+          </article>
+
+          <article class="project-preview-card project-preview-card--compact">
+            <div class="project-preview-card__body">
+              <span class="project-preview-card__label">Portrait</span>
+              <h3 class="project-preview-card__title">Série éditoriale</h3>
+              <p class="project-preview-card__text">Des images construites pour durer au-delà du simple effet de mode.</p>
+            </div>
+          </article>
         </div>
       </div>
 
-      <div class="text-center" style="margin-top: var(--space-xl);">
+      <div class="text-center">
         <a href="/services.html" class="btn btn--beige">Explorer le portfolio</a>
       </div>
     </div>
@@ -142,7 +179,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés.</p>
+        <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
       </div>
     </div>
   </footer>

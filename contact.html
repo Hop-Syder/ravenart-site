@@ -22,7 +22,7 @@
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
             <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
-                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" style="height: 60px; width: auto;">
+                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
             </a>
 
             <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
@@ -42,13 +42,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 60vh;">
+    <section class="hero hero--short">
         <video class="hero__video" autoplay muted loop playsinline>
             <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
 
-        <div class="hero__content" style="margin-top: var(--space-2xl);">
+        <div class="hero__content hero__content--offset">
             <h2 class="hero__title">Contactez-nous</h2>
             <p class="hero__subtitle">Transformons votre vision en réalité cinématographique</p>
         </div>
@@ -57,37 +57,42 @@
     <!-- Contact Form Section -->
     <section class="section">
         <div class="container container--narrow">
-            <div class="grid grid--2" style="gap: var(--space-2xl);">
+            <div class="section-intro">
+                <span class="section-intro__eyebrow">Premier échange</span>
+                <h2 class="section-intro__title">Parlons de votre projet</h2>
+                <p class="section-intro__lead">La section contact passe d'un simple duo “infos + formulaire” à une composition plus éditoriale et plus lisible.</p>
+            </div>
+
+            <div class="contact-shell">
                 <!-- Contact Info -->
-                <div>
-                    <h2 style="margin-bottom: var(--space-lg);">Parlons de votre projet</h2>
+                <div class="contact-panel">
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <h4 class="contact-item__label">Localisation</h4>
+                            <p>Cotonou, Bénin<br>Afrique de l'Ouest</p>
+                        </div>
 
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h4 style="margin-bottom: var(--space-sm); color: var(--text-accent);">Localisation</h4>
-                        <p>Cotonou, Bénin<br>Afrique de l'Ouest</p>
-                    </div>
+                        <div class="contact-item">
+                            <h4 class="contact-item__label">Email</h4>
+                            <a href="mailto:contact@ravenart.bj" class="contact-item__value">contact@ravenart.bj</a>
+                        </div>
 
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h4 style="margin-bottom: var(--space-sm); color: var(--text-accent);">Email</h4>
-                        <a href="mailto:contact@ravenart.bj" style="font-size: var(--text-lg);">contact@ravenart.bj</a>
-                    </div>
+                        <div class="contact-item">
+                            <h4 class="contact-item__label">Téléphone</h4>
+                            <a href="tel:+229XXXXXXXX" class="contact-item__value">+229 XX XX XX XX</a>
+                        </div>
 
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h4 style="margin-bottom: var(--space-sm); color: var(--text-accent);">Téléphone</h4>
-                        <a href="tel:+229XXXXXXXX" style="font-size: var(--text-lg);">+229 XX XX XX XX</a>
-                    </div>
-
-                    <div>
-                        <h4 style="margin-bottom: var(--space-sm); color: var(--text-accent);">Horaires</h4>
-                        <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi: Sur rendez-vous</p>
+                        <div class="contact-item">
+                            <h4 class="contact-item__label">Horaires</h4>
+                            <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi: Sur rendez-vous</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
                 <div>
-                    <form id="contact-form"
-                        style="background-color: var(--bg-secondary); padding: var(--space-lg); border-radius: var(--radius-md);">
-                        <h3 style="margin-bottom: var(--space-lg);">Envoyez-nous un message</h3>
+                    <form id="contact-form" class="form-panel">
+                        <h3 class="mb-lg">Envoyez-nous un message</h3>
 
                         <div class="form-group">
                             <label for="name" class="form-label">Nom complet *</label>
@@ -123,11 +128,10 @@
                             <label for="budget" class="form-label">Budget estimé</label>
                             <select id="budget" name="budget" class="form-input">
                                 <option value="">Sélectionnez une fourchette</option>
-                                <option value="small">
-                                    < 500,000 FCFA</option>
+                                <option value="small">&lt; 500,000 FCFA</option>
                                 <option value="medium">500,000 - 1,500,000 FCFA</option>
                                 <option value="large">1,500,000 - 5,000,000 FCFA</option>
-                                <option value="xlarge">> 5,000,000 FCFA</option>
+                                <option value="xlarge">&gt; 5,000,000 FCFA</option>
                             </select>
                         </div>
 
@@ -139,8 +143,7 @@
 
                         <button type="submit" class="btn btn--primary btn--full">Envoyer le message</button>
 
-                        <p
-                            style="margin-top: var(--space-md); font-size: var(--text-xs); color: var(--text-muted); text-align: center;">
+                        <p class="helper-text">
                             * Champs obligatoires. Nous vous répondrons sous 24-48h.
                         </p>
                     </form>
@@ -152,29 +155,32 @@
     <!-- FAQ Section -->
     <section class="section section--alternate">
         <div class="container container--narrow">
-            <h2 class="text-center" style="margin-bottom: var(--space-xl);">Questions Fréquentes</h2>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Clarté</span>
+                <h2 class="section-intro__title">Questions Fréquentes</h2>
+            </div>
 
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="card" style="margin-bottom: var(--space-md);">
-                    <h4 style="margin-bottom: var(--space-sm);">Quel est le délai moyen pour un projet ?</h4>
+            <div class="faq-list narrow-center">
+                <div class="card card--feature faq-card">
+                    <h4 class="mb-sm">Quel est le délai moyen pour un projet ?</h4>
                     <p class="text-muted">Le délai varie selon la complexité du projet. En moyenne, comptez 2-4 semaines
                         pour une production vidéo standard, de la pré-production à la livraison finale.</p>
                 </div>
 
-                <div class="card" style="margin-bottom: var(--space-md);">
-                    <h4 style="margin-bottom: var(--space-sm);">Travaillez-vous uniquement au Bénin ?</h4>
+                <div class="card card--outlined faq-card">
+                    <h4 class="mb-sm">Travaillez-vous uniquement au Bénin ?</h4>
                     <p class="text-muted">Basés au Bénin, nous intervenons dans toute l'Afrique de l'Ouest et
                         internationalement pour des projets d'envergure.</p>
                 </div>
 
-                <div class="card" style="margin-bottom: var(--space-md);">
-                    <h4 style="margin-bottom: var(--space-sm);">Pourquoi exclusivement en noir & blanc ?</h4>
+                <div class="card card--minimal faq-card">
+                    <h4 class="mb-sm">Pourquoi exclusivement en noir & blanc ?</h4>
                     <p class="text-muted">Le noir & blanc est notre signature artistique. Cette approche monochrome crée
                         des visuels intemporels, élégants et distinctifs qui se démarquent durablement.</p>
                 </div>
 
-                <div class="card" style="margin-bottom: var(--space-md);">
-                    <h4 style="margin-bottom: var(--space-sm);">Proposez-vous des devis personnalisés ?</h4>
+                <div class="card card--feature faq-card">
+                    <h4 class="mb-sm">Proposez-vous des devis personnalisés ?</h4>
                     <p class="text-muted">Absolument. Chaque projet est unique et mérite une estimation sur mesure.
                         Contactez-nous avec les détails de votre projet pour recevoir un devis détaillé.</p>
                 </div>
@@ -185,9 +191,11 @@
     <!-- CTA Section -->
     <section class="section">
         <div class="container text-center">
-            <h2 style="margin-bottom: var(--space-md);">Prêt à créer quelque chose d'exceptionnel ?</h2>
-            <p style="margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto;">Ne
-                laissez pas votre vision rester dans l'ombre. Donnons-lui vie avec l'excellence RavenArt.</p>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Échange</span>
+                <h2 class="section-intro__title">Prêt à créer quelque chose d'exceptionnel ?</h2>
+                <p class="section-intro__lead">Ne laissez pas votre vision rester dans l'ombre. Donnons-lui vie avec l'excellence RavenArt.</p>
+            </div>
             <a href="mailto:contact@ravenart.bj" class="btn btn--secondary">contact@ravenart.bj</a>
         </div>
     </section>
@@ -218,7 +226,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés.</p>
+                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
             </div>
         </div>
     </footer>

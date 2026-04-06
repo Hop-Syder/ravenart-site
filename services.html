@@ -22,7 +22,7 @@
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
             <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
-                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" style="height: 60px; width: auto;">
+                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
             </a>
 
             <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
@@ -42,13 +42,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 60vh;">
+    <section class="hero hero--short">
         <video class="hero__video" autoplay muted loop playsinline>
             <source src="/public/video-mobile/ravenart.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
 
-        <div class="hero__content" style="margin-top: var(--space-2xl);">
+        <div class="hero__content hero__content--offset">
             <h1 class="hero__title">Nos Services</h1>
             <p class="hero__subtitle">Excellence audiovisuelle noir & blanc</p>
         </div>
@@ -57,13 +57,20 @@
     <!-- Services Grid -->
     <section class="section">
         <div class="container">
-            <div class="grid grid--2">
-                <article class="card">
+            <div class="section-intro">
+                <span class="section-intro__eyebrow">Prestations</span>
+                <h2 class="section-intro__title">Des formats calibrés selon l'intention</h2>
+                <p class="section-intro__lead">Chaque offre conserve l'ADN RavenArt, mais avec une présence visuelle et un niveau d'accompagnement adaptés au contexte.</p>
+            </div>
+
+            <div class="grid grid--2 grid--staggered">
+                <article class="card card--feature">
+                    <span class="card__kicker">01 / Marque</span>
                     <h3 class="card__title">Production Vidéo Corporate</h3>
                     <p class="card__text">Films d'entreprise haut de gamme capturant l'essence de votre marque avec une
                         esthétique cinématographique noir & blanc. De la conception à la post-production, nous créons
                         des récits visuels puissants.</p>
-                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                    <ul class="card__meta-list">
                         <li>Films institutionnels</li>
                         <li>Vidéos de présentation produit</li>
                         <li>Reportages corporate</li>
@@ -71,11 +78,12 @@
                     </ul>
                 </article>
 
-                <article class="card">
+                <article class="card card--outlined">
+                    <span class="card__kicker">02 / Impact</span>
                     <h3 class="card__title">Publicité & Brand Content</h3>
                     <p class="card__text">Spots publicitaires et contenus de marque qui se démarquent par leur
                         sophistication visuelle. Chaque frame est pensé comme une œuvre d'art monochrome.</p>
-                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                    <ul class="card__meta-list">
                         <li>Spots TV & digital</li>
                         <li>Campaignes brandées</li>
                         <li>Séries de contenu</li>
@@ -83,11 +91,12 @@
                     </ul>
                 </article>
 
-                <article class="card">
+                <article class="card card--minimal">
+                    <span class="card__kicker">03 / Regard</span>
                     <h3 class="card__title">Photographie Artistique</h3>
                     <p class="card__text">Portraits et reportages photographiques en noir & blanc qui transcendent le
                         temps. Notre approche artistique transforme chaque instant en image intemporelle.</p>
-                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                    <ul class="card__meta-list">
                         <li>Portraits professionnels</li>
                         <li>Couverture d'événements</li>
                         <li>Photographie de mode</li>
@@ -95,11 +104,12 @@
                     </ul>
                 </article>
 
-                <article class="card">
+                <article class="card card--feature">
+                    <span class="card__kicker">04 / Cohérence</span>
                     <h3 class="card__title">Direction Artistique</h3>
                     <p class="card__text">Conception visuelle complète pour projets ambitieux. Nous définissons
                         l'identité visuelle de vos productions avec une cohérence esthétique irréprochable.</p>
-                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                    <ul class="card__meta-list">
                         <li>Identité visuelle de projet</li>
                         <li>Styling & art direction</li>
                         <li>Supervision créative</li>
@@ -107,11 +117,12 @@
                     </ul>
                 </article>
 
-                <article class="card">
+                <article class="card card--outlined">
+                    <span class="card__kicker">05 / Finition</span>
                     <h3 class="card__title">Post-Production Cinéma</h3>
                     <p class="card__text">Étalonnage noir & blanc expert, montage narratif et finition professionnelle.
                         Chaque détail est peaufiné pour atteindre la perfection visuelle.</p>
-                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                    <ul class="card__meta-list">
                         <li>Étalonnage B&W cinéma</li>
                         <li>Montage narratif</li>
                         <li>Sound design</li>
@@ -119,11 +130,12 @@
                     </ul>
                 </article>
 
-                <article class="card">
+                <article class="card card--minimal">
+                    <span class="card__kicker">06 / Présence</span>
                     <h3 class="card__title">Couverture Événementielle</h3>
                     <p class="card__text">Captation vidéo et photo de vos événements avec une approche documentaire
                         artistique. Galas, conférences, lancements — immortalisés avec élégance.</p>
-                    <ul style="margin-top: var(--space-md); color: var(--text-secondary); font-size: var(--text-sm);">
+                    <ul class="card__meta-list">
                         <li>Événements corporate</li>
                         <li>Galas & cérémonies</li>
                         <li>Lancements de produits</li>
@@ -137,35 +149,35 @@
     <!-- Process Section -->
     <section class="section section--alternate">
         <div class="container container--narrow">
-            <h2 class="text-center" style="margin-bottom: var(--space-xl);">Notre Méthode</h2>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Méthode</span>
+                <h2 class="section-intro__title">Notre Méthode</h2>
+                <p class="section-intro__lead">Un déroulé rigoureux, présenté comme une suite de séquences plutôt qu'une liste purement fonctionnelle.</p>
+            </div>
 
-            <div class="grid grid--4" style="text-align: center;">
-                <div>
-                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">01</h4>
+            <div class="method-grid">
+                <div class="method-step">
+                    <span class="method-step__index">01</span>
                     <h5>Découverte</h5>
-                    <p class="text-muted" style="font-size: var(--text-sm);">Brief approfondi et compréhension de votre
-                        vision</p>
+                    <p class="text-muted">Brief approfondi et compréhension de votre vision.</p>
                 </div>
 
-                <div>
-                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">02</h4>
+                <div class="method-step">
+                    <span class="method-step__index">02</span>
                     <h5>Conception</h5>
-                    <p class="text-muted" style="font-size: var(--text-sm);">Scénarisation et direction artistique sur
-                        mesure</p>
+                    <p class="text-muted">Scénarisation et direction artistique sur mesure.</p>
                 </div>
 
-                <div>
-                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">03</h4>
+                <div class="method-step">
+                    <span class="method-step__index">03</span>
                     <h5>Production</h5>
-                    <p class="text-muted" style="font-size: var(--text-sm);">Tournage professionnel avec équipement
-                        cinéma</p>
+                    <p class="text-muted">Tournage professionnel avec équipement cinéma.</p>
                 </div>
 
-                <div>
-                    <h4 style="font-size: var(--text-3xl); margin-bottom: var(--space-sm);">04</h4>
+                <div class="method-step">
+                    <span class="method-step__index">04</span>
                     <h5>Post-Production</h5>
-                    <p class="text-muted" style="font-size: var(--text-sm);">Montage, étalonnage B&W et livraison
-                        premium</p>
+                    <p class="text-muted">Montage, étalonnage B&W et livraison premium.</p>
                 </div>
             </div>
         </div>
@@ -174,9 +186,11 @@
     <!-- CTA Section -->
     <section class="section">
         <div class="container text-center">
-            <h2 style="margin-bottom: var(--space-md);">Prêt à créer quelque chose d'exceptionnel ?</h2>
-            <p style="margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
-                Discutons de votre projet et donnons vie à votre vision avec l'excellence RavenArt.</p>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Lancement</span>
+                <h2 class="section-intro__title">Prêt à créer quelque chose d'exceptionnel ?</h2>
+                <p class="section-intro__lead">Discutons de votre projet et donnons vie à votre vision avec l'excellence RavenArt.</p>
+            </div>
             <a href="/contact.html" class="btn btn--primary">Démarrer un projet</a>
         </div>
     </section>
@@ -207,7 +221,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés.</p>
+                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
             </div>
         </div>
     </footer>
