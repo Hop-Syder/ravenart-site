@@ -1,36 +1,45 @@
 <!doctype html>
+<!--
+ * @author @hopsyder
+ * @organization Nexus Partners
+ * @description Page À Propos — RavenArt | Notre Histoire & Vision Cinématographique
+ * @created 2026-04-07
+ * @updated 2026-04-07
+ * 🌐 ceo.nexuspartners.xyz
+ * 📧 daoudaabassichristian@gmail.com
+ * ──────────────────────────────────
+-->
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>À Propos — RavenArt | Notre Histoire & Vision</title>
+    <title>À Propos — RavenArt | Notre Histoire &amp; Vision Cinématographique</title>
+    <meta name="description" content="Découvrez l'histoire de RavenArt, agence audiovisuelle premium du Bénin. Notre vision, nos valeurs et notre philosophie du noir & blanc cinématographique." />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
+<body class="page-stars">
+    <div class="page-stars__bg" aria-hidden="true">
+        <span class="section__stars-layer section__stars-layer--one"></span>
+        <span class="section__stars-layer section__stars-layer--two"></span>
+        <span class="section__stars-layer section__stars-layer--three"></span>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
             <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
                 <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
             </a>
-
             <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-
             <ul class="navbar__menu">
                 <li><a href="/" class="navbar__link">Accueil</a></li>
                 <li><a href="/services.html" class="navbar__link">Services</a></li>
@@ -41,61 +50,72 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ── HERO ──────────────────────────────────────── -->
     <section class="hero hero--short">
         <video class="hero__video" autoplay muted loop playsinline>
-            <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
+            <source src="/public/video-mobile/ravenart.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
-
         <div class="hero__content hero__content--offset">
-            <h1 class="hero__title">Notre <br> Histoire</h1>
-            <p class="hero__subtitle">L'art du noir & blanc au service de votre vision</p>
+            <span class="services-hero__eyebrow">L'agence RavenArt</span>
+            <h1 class="hero__title">Notre <br>Histoire</h1>
+            <p class="hero__subtitle">L'art du noir &amp; blanc au service de votre vision</p>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="section">
+    <!-- ── CITATION SIGNATURE ─────────────────────────── -->
+    <section class="section section--quote-hero">
         <div class="container container--narrow">
-            <div class="section-intro section-intro--center">
-                <span class="section-intro__eyebrow">Origine</span>
-                <h2 class="section-intro__title">Pourquoi RavenArt ?</h2>
-            </div>
+            <blockquote class="about-quote">
+                <span class="about-quote__mark" aria-hidden="true">"</span>
+                <p class="about-quote__text">Le noir et blanc n'est pas une absence de couleur —<br>c'est une présence absolue d'émotion.</p>
+                <footer class="about-quote__author">— Fondateurs, RavenArt</footer>
+            </blockquote>
+        </div>
+    </section>
 
-            <div class="editorial-grid">
-                <div class="editorial-block editorial-block__text">
-                    <p class="section-intro__lead">
-                        RavenArt est née d'une conviction profonde : le noir et blanc n'est pas une absence de couleur, mais
-                        une présence absolue d'émotion. Dans un monde saturé de visuels colorés, nous choisissons la voie de
-                        l'élégance intemporelle.
-                    </p>
-
-                    <p class="section-intro__lead">
-                        Basée au Bénin, notre agence audiovisuelle s'engage à élever les standards de production en Afrique
-                        de l'Ouest. Chaque projet est une opportunité de créer quelque chose d'extraordinaire.
-                    </p>
-
-                    <p class="section-intro__lead">
-                        Nous croyons que la simplicité maîtrisée est la forme ultime de sophistication. C'est pourquoi nous
-                        perfectionnons chaque nuance de gris, chaque contraste, chaque ombre pour révéler l'essence pure du message.
-                    </p>
+    <!-- ── ORIGINE — Editorial Grid ───────────────────── -->
+    <section class="section">
+        <div class="container">
+            <div class="about-origin-grid">
+                <!-- Texte éditorial -->
+                <div class="about-origin__content">
+                    <div class="section-intro">
+                        <span class="section-intro__eyebrow">Origine</span>
+                        <h2 class="section-intro__title">Pourquoi RavenArt ?</h2>
+                    </div>
+                    <p class="section-intro__lead">RavenArt est née d'une conviction profonde : dans un monde saturé de visuels colorés, nous choisissons la voie de l'élégance intemporelle. Chaque projet est une opportunité de créer quelque chose d'extraordinaire.</p>
+                    <p>Basée au Bénin, notre agence s'engage à élever les standards de production audiovisuelle en Afrique de l'Ouest. Nous perfectionnons chaque nuance de gris, chaque contraste, chaque ombre pour révéler l'essence pure du message.</p>
+                    <div class="about-origin__badges">
+                        <span class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Cotonou, Bénin
+                        </span>
+                        <span class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                            Depuis 2019
+                        </span>
+                        <span class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                            12 pays couverts
+                        </span>
+                    </div>
                 </div>
 
-                <div class="rhythm-stack">
-                    <div class="editorial-block">
-                        <p class="editorial-block__quote">"Le noir et blanc n'appauvrit pas l'image. Il en extrait la vérité."</p>
-                    </div>
-                    <div class="card card--outlined">
-                        <span class="card__kicker">Ancrage</span>
-                        <h3 class="card__title">Bénin, regard international</h3>
-                        <p class="card__text">Une base locale forte, avec une ambition visuelle pensée pour dialoguer avec des standards éditoriaux globaux.</p>
+                <!-- Bloc éditorial citation + ancrage -->
+                <div class="about-origin__aside">
+                    <div class="about-highlight-card">
+                        <div class="about-highlight-card__accent" aria-hidden="true"></div>
+                        <p class="about-highlight-card__quote">"Le noir et blanc révèle ce que la couleur cache."</p>
+                        <p class="about-highlight-card__body">Une base locale forte, avec une ambition visuelle pensée pour dialoguer avec des standards éditoriaux globaux. Excellence africaine, rayonnement mondial.</p>
+                        <div class="about-highlight-card__tag">Bénin — regard international</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- ── VALEURS ─────────────────────────────────────── -->
     <section class="section section--alternate">
         <div class="container">
             <div class="section-intro section-intro--center">
@@ -103,74 +123,81 @@
                 <h2 class="section-intro__title">Nos Valeurs</h2>
             </div>
 
-            <div class="grid grid--3 grid--staggered">
-                <article class="card card--feature text-center">
-                    <span class="card__kicker">Exigence</span>
-                    <h3 class="card__title">Excellence</h3>
-                    <p class="card__text">Aucun compromis sur la qualité. Chaque frame, chaque image doit atteindre la
-                        perfection technique et artistique.</p>
+            <div class="values-grid">
+                <article class="value-card">
+                    <div class="value-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <span class="value-card__kicker">Exigence</span>
+                    <h3 class="value-card__title">Excellence</h3>
+                    <p class="value-card__text">Aucun compromis sur la qualité. Chaque frame, chaque image doit atteindre la perfection technique et artistique.</p>
                 </article>
 
-                <article class="card card--outlined text-center">
-                    <span class="card__kicker">Vérité</span>
-                    <h3 class="card__title">Authenticité</h3>
-                    <p class="card__text">Nous capturons l'essence vraie de vos histoires, sans artifice superflu, avec
-                        une honnêteté visuelle radicale.</p>
+                <article class="value-card value-card--gold">
+                    <div class="value-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <span class="value-card__kicker">Vérité</span>
+                    <h3 class="value-card__title">Authenticité</h3>
+                    <p class="value-card__text">Nous capturons l'essence vraie de vos histoires, sans artifice superflu, avec une honnêteté visuelle radicale.</p>
                 </article>
 
-                <article class="card card--minimal text-center">
-                    <span class="card__kicker">Recherche</span>
-                    <h3 class="card__title">Innovation</h3>
-                    <p class="card__text">Repousser les limites du noir & blanc contemporain avec des techniques
-                        cinématographiques de pointe.</p>
+                <article class="value-card">
+                    <div class="value-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <span class="value-card__kicker">Recherche</span>
+                    <h3 class="value-card__title">Innovation</h3>
+                    <p class="value-card__text">Repousser les limites du noir &amp; blanc contemporain avec des techniques cinématographiques de pointe.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy Section -->
+    <!-- ── PHILOSOPHIE — 2 colonnes ───────────────────── -->
     <section class="section">
         <div class="container container--narrow">
-            <div class="stack-xl">
-                <div class="section-intro section-intro--center">
-                    <span class="section-intro__eyebrow">Pensée</span>
-                    <h2 class="section-intro__title">Notre Philosophie</h2>
-                    <p class="editorial-block__quote">"Le noir et blanc révèle ce que la couleur cache."</p>
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Pensée</span>
+                <h2 class="section-intro__title">Notre Philosophie</h2>
+                <p class="section-intro__lead">"Le noir et blanc révèle ce que la couleur cache."</p>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <div class="philosophy-item__num" aria-hidden="true">01</div>
+                    <h4 class="philosophy-item__title">Cinéma &amp; Temps</h4>
+                    <p>Nous puisons notre inspiration dans l'âge d'or du cinéma noir &amp; blanc, où chaque plan était une composition picturale. Cette influence classique se marie avec une sensibilité contemporaine.</p>
                 </div>
 
-                <div class="grid grid--2">
-                    <div>
-                        <h4 class="mb-sm">Cinéma & Temps</h4>
-                        <p>Nous puisons notre inspiration dans l'âge d'or du cinéma noir & blanc, où chaque plan était
-                            une composition picturale. Cette influence classique se marie avec une sensibilité
-                            contemporaine pour créer des œuvres intemporelles.</p>
-                    </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-item__num" aria-hidden="true">02</div>
+                    <h4 class="philosophy-item__title">Luxe Minimaliste</h4>
+                    <p>Le luxe véritable réside dans la retenue. Pas de fioritures inutiles, pas de distractions chromatiques. Juste l'essentiel, sublimé par une maîtrise technique absolue.</p>
+                </div>
 
-                    <div>
-                        <h4 class="mb-sm">Luxe Minimaliste</h4>
-                        <p>Le luxe véritable réside dans la retenue. Pas de fioritures inutiles, pas de distractions
-                            chromatiques. Juste l'essentiel, sublimé par une maîtrise technique absolue et une vision
-                            artistique claire.</p>
-                    </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-item__num" aria-hidden="true">03</div>
+                    <h4 class="philosophy-item__title">Storytelling Visuel</h4>
+                    <p>Chaque projet raconte une histoire. Nous sommes des conteurs visuels qui utilisent la lumière, l'ombre et le mouvement pour transmettre des émotions profondes.</p>
+                </div>
 
-                    <div>
-                        <h4 class="mb-sm">Storytelling Visuel</h4>
-                        <p>Chaque projet raconte une histoire. Nous sommes des conteurs visuels qui utilisent la
-                            lumière, l'ombre et le mouvement pour transmettre des émotions profondes et créer des
-                            connexions authentiques.</p>
-                    </div>
-
-                    <div>
-                        <h4 class="mb-sm">Impact Durable</h4>
-                        <p>Nous créons des contenus qui marquent les esprits et perdurent. Notre approche monochrome
-                            garantit que vos visuels resteront pertinents et puissants, année après année.</p>
-                    </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-item__num" aria-hidden="true">04</div>
+                    <h4 class="philosophy-item__title">Impact Durable</h4>
+                    <p>Nous créons des contenus qui marquent les esprits et perdurent. Notre approche monochrome garantit que vos visuels resteront pertinents, année après année.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team/Approach Section -->
+    <!-- ── APPROCHE — Cards avec icônes ──────────────── -->
     <section class="section section--alternate">
         <div class="container">
             <div class="section-intro section-intro--center">
@@ -178,40 +205,55 @@
                 <h2 class="section-intro__title">Notre Approche</h2>
             </div>
 
-            <div class="grid grid--3 grid--staggered">
-                <div class="card card--feature text-center">
-                    <span class="card__kicker">Préparer</span>
-                    <h4>Pré-Production Rigoureuse</h4>
-                    <p class="text-muted">Scénarisation détaillée, storyboarding précis et planification méticuleuse
-                        pour garantir l'excellence dès le premier jour de tournage.</p>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <div class="approach-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                    </div>
+                    <span class="approach-card__step">Préparer</span>
+                    <h4 class="approach-card__title">Pré-Production Rigoureuse</h4>
+                    <p class="approach-card__text">Scénarisation détaillée, storyboarding précis et planification méticuleuse pour garantir l'excellence dès le premier jour de tournage.</p>
                 </div>
 
-                <div class="card card--outlined text-center">
-                    <span class="card__kicker">Capturer</span>
-                    <h4>Équipement Cinéma</h4>
-                    <p class="text-muted">Caméras professionnelles, optiques haut de gamme et éclairage contrôlé pour
-                        capturer chaque détail avec une fidélité exceptionnelle.</p>
+                <div class="approach-card approach-card--featured">
+                    <div class="approach-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/>
+                        </svg>
+                    </div>
+                    <span class="approach-card__step">Capturer</span>
+                    <h4 class="approach-card__title">Équipement Cinéma</h4>
+                    <p class="approach-card__text">Caméras professionnelles, optiques haut de gamme et éclairage contrôlé pour capturer chaque détail avec une fidélité exceptionnelle.</p>
                 </div>
 
-                <div class="card card--minimal text-center">
-                    <span class="card__kicker">Affiner</span>
-                    <h4>Post-Production Expert</h4>
-                    <p class="text-muted">Étalonnage B&W spécialisé, montage narratif soigné et finition professionnelle
-                        pour un rendu cinéma irréprochable.</p>
+                <div class="approach-card">
+                    <div class="approach-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <span class="approach-card__step">Affiner</span>
+                    <h4 class="approach-card__title">Post-Production Expert</h4>
+                    <p class="approach-card__text">Étalonnage B&amp;W spécialisé, montage narratif soigné et finition professionnelle pour un rendu cinéma irréprochable.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section">
+    <!-- ── CTA FINAL DOUBLE ───────────────────────────── -->
+    <section class="section section--cta-final">
         <div class="container text-center">
             <div class="section-intro section-intro--center">
                 <span class="section-intro__eyebrow">Suite</span>
                 <h2 class="section-intro__title">Rejoignez l'aventure RavenArt</h2>
                 <p class="section-intro__lead">Transformons ensemble votre vision en réalité cinématographique.</p>
             </div>
-            <a href="/contact.html" class="btn btn--primary">Commencer un projet</a>
+            <div class="cta-final__actions">
+                <a href="/contact.html" class="btn btn--gold">Commencer un projet</a>
+                <a href="/projects.html" class="btn btn--secondary">Voir nos réalisations</a>
+            </div>
         </div>
     </section>
 
@@ -221,17 +263,16 @@
             <div class="footer__content">
                 <div class="footer__section">
                     <h4>RavenArt</h4>
-                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir & blanc.</p>
+                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir &amp; blanc.</p>
                 </div>
-
                 <div class="footer__section">
                     <h4>Navigation</h4>
                     <a href="/">Accueil</a>
                     <a href="/services.html">Services</a>
+                    <a href="/projects.html">Nos Projets</a>
                     <a href="/about.html">À Propos</a>
                     <a href="/contact.html">Contact</a>
                 </div>
-
                 <div class="footer__section">
                     <h4>Contact</h4>
                     <p>Cotonou, Bénin</p>
@@ -239,7 +280,6 @@
                     <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
                 </div>
             </div>
-
             <div class="footer__bottom">
                 <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
             </div>
@@ -248,5 +288,4 @@
 
     <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>

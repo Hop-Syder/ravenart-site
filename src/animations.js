@@ -32,6 +32,28 @@ export function animateNavbar() {
     });
 }
 
+// === Hero Eyebrow Animation ===
+export function animateHeroEyebrow() {
+    const eyebrows = document.querySelectorAll('.services-hero__eyebrow');
+
+    if (eyebrows.length === 0) return;
+
+    gsap.set(eyebrows, {
+        opacity: 0,
+        x: -20,
+        filter: 'blur(10px)'
+    });
+
+    gsap.to(eyebrows, {
+        opacity: 0.9,
+        x: 0,
+        filter: 'blur(0px)',
+        duration: 1.2,
+        ease: 'power3.out',
+        delay: 0.3
+    });
+}
+
 // === Hero H1 Split Text Animation ===
 export function animateHeroTitle() {
     const heroTitles = document.querySelectorAll('.hero__title');
@@ -465,6 +487,7 @@ export function initAnimations() {
 
     // Page load animations
     animateNavbar();
+    animateHeroEyebrow();
     animateHeroTitle();
     animateTypingText();
     animateHeroCTA();

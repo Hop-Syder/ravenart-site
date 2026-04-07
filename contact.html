@@ -1,11 +1,22 @@
 <!doctype html>
+/**
+ * @author @hopsyder
+ * @organization Nexus Partners
+ * @description Page Contact — RavenArt | Démarrons Votre Projet
+ * @created 2026-04-07
+ * @updated 2026-04-07
+ * 🌐 ceo.nexuspartners.xyz
+ * 📧 daoudaabassichristian@gmail.com
+ * ──────────────────────────────────
+*/
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact — RavenArt | Démarrons Votre Projet</title>
+    <title>Contact — RavenArt | Démarrons Votre Projet Cinématographique</title>
+    <meta name="description" content="Contactez RavenArt pour vos projets audiovisuels premium au Bénin. Formulaire de contact, localisation et FAQ." />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +28,13 @@
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
+<body class="page-stars">
+    <div class="page-stars__bg" aria-hidden="true">
+        <span class="section__stars-layer section__stars-layer--one"></span>
+        <span class="section__stars-layer section__stars-layer--two"></span>
+        <span class="section__stars-layer section__stars-layer--three"></span>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
@@ -44,12 +61,13 @@
     <!-- Hero Section -->
     <section class="hero hero--short">
         <video class="hero__video" autoplay muted loop playsinline>
-            <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
+            <source src="/public/video-mobile/ravenart.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
 
         <div class="hero__content hero__content--offset">
-            <h2 class="hero__title">Contactez-nous</h2>
+            <span class="services-hero__eyebrow">Parlons de vous</span>
+            <h1 class="hero__title">Contact</h1>
             <p class="hero__subtitle">Transformons votre vision en réalité cinématographique</p>
         </div>
     </section>
@@ -59,93 +77,98 @@
         <div class="container container--narrow">
             <div class="section-intro">
                 <span class="section-intro__eyebrow">Premier échange</span>
-                <h2 class="section-intro__title">Parlons de votre projet</h2>
-                <p class="section-intro__lead">La section contact passe d'un simple duo “infos + formulaire” à une composition plus éditoriale et plus lisible.</p>
+                <h2 class="section-intro__title">Démarrons l'aventure</h2>
+                <p class="section-intro__lead">Une approche éditoriale pour une mise en relation fluide et élégante.</p>
             </div>
 
-            <div class="contact-shell">
+            <div class="contact-layout">
                 <!-- Contact Info -->
-                <div class="contact-panel">
-                    <div class="contact-list">
-                        <div class="contact-item">
-                            <h4 class="contact-item__label">Localisation</h4>
-                            <p>Cotonou, Bénin<br>Afrique de l'Ouest</p>
+                <div class="contact-sidebar">
+                    <div class="contact-info-card">
+                        <div class="contact-info-group">
+                            <span class="contact-info-label">Localisation</span>
+                            <p class="contact-info-text">Cotonou, Bénin<br>Afrique de l'Ouest</p>
                         </div>
 
-                        <div class="contact-item">
-                            <h4 class="contact-item__label">Email</h4>
-                            <a href="mailto:contact@ravenart.bj" class="contact-item__value">contact@ravenart.bj</a>
+                        <div class="contact-info-group">
+                            <span class="contact-info-label">Email Direct</span>
+                            <a href="mailto:contact@ravenart.bj" class="contact-info-link">contact@ravenart.bj</a>
                         </div>
 
-                        <div class="contact-item">
-                            <h4 class="contact-item__label">Téléphone</h4>
-                            <a href="tel:+229XXXXXXXX" class="contact-item__value">+229 XX XX XX XX</a>
+                        <div class="contact-info-group">
+                            <span class="contact-info-label">Ligne Mobile</span>
+                            <a href="tel:+229XXXXXXXX" class="contact-info-link">+229 XX XX XX XX</a>
                         </div>
 
-                        <div class="contact-item">
-                            <h4 class="contact-item__label">Horaires</h4>
-                            <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi: Sur rendez-vous</p>
+                        <div class="contact-info-group">
+                            <span class="contact-info-label">Horaires Studio</span>
+                            <p class="contact-info-text">Lun - Ven: 09:00 — 18:00<br>Sam: Rendez-vous uniquement</p>
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Vimeo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.99 3.37c-1.47-.13-2.85.34-3.48 2.06-.5 1.34-1.12 3.66-1.57 5.51-.5 2.1-1.07 1.87-1.41.87-.5-1.46-.83-3.05-1.14-5.27-.15-1.12-.66-1.63-1.61-1.46-1.01.19-2.28.61-3.69 1.14C3.05 6.56 2.5 7.14 2 8c.24.16.89.5 1.5.54.91.06 1.41-.66 1.83-2.02.43-1.39.95-3.07 1.57-3.41.4-.23.83-.23 1.13.5.3.74.55 1.76.7 2.89.2 1.47.45 2.94.7 4.4.45 2.5 1.07 3.51 1.9 3.51.5 0 1.2-.5 2.1-1.44s1.63-2.3 2.18-3.92c1-3.32 1.9-5.38 3.5-5.38.16 0 .34.02.5.06l.33.06z"/></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div>
-                    <form id="contact-form" class="form-panel">
-                        <h3 class="mb-lg">Envoyez-nous un message</h3>
-
-                        <div class="form-group">
-                            <label for="name" class="form-label">Nom complet *</label>
-                            <input type="text" id="name" name="name" class="form-input" required aria-required="true">
+                <div class="contact-main">
+                    <form id="contact-form" class="premium-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name" class="premium-label">Nom complet</label>
+                                <input type="text" id="name" name="name" class="premium-input" placeholder="Ex: Jean Dupont" required>
+                                <span class="field-line"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="email" class="premium-label">Email</label>
+                                <input type="email" id="email" name="email" class="premium-input" placeholder="jean@exemple.com" required>
+                                <span class="field-line"></span>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email *</label>
-                            <input type="email" id="email" name="email" class="form-input" required
-                                aria-required="true">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="service" class="premium-label">Service d'intérêt</label>
+                                <select id="service" name="service" class="premium-select">
+                                    <option value="" disabled selected>Choisir un service</option>
+                                    <option value="video-corp">Vidéo Corporate</option>
+                                    <option value="branding">Brand Content</option>
+                                    <option value="photo">Photographie</option>
+                                    <option value="direction">Direction Artistique</option>
+                                </select>
+                                <span class="field-line"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="budget" class="premium-label">Budget estimé</label>
+                                <select id="budget" name="budget" class="premium-select">
+                                    <option value="" disabled selected>Fourchette de budget</option>
+                                    <option value="standard">Standard (< 1.5M FCFA)</option>
+                                    <option value="premium">Premium (1.5M - 5M FCFA)</option>
+                                    <option value="exclusive">Excellence (> 5M FCFA)</option>
+                                </select>
+                                <span class="field-line"></span>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Téléphone</label>
-                            <input type="tel" id="phone" name="phone" class="form-input">
+                        <div class="form-field">
+                            <label for="message" class="premium-label">Votre Vision</label>
+                            <textarea id="message" name="message" class="premium-textarea" placeholder="Décrivez votre projet..." required></textarea>
+                            <span class="field-line"></span>
                         </div>
 
-                        <div class="form-group">
-                            <label for="service" class="form-label">Service souhaité</label>
-                            <select id="service" name="service" class="form-input">
-                                <option value="">Sélectionnez un service</option>
-                                <option value="video">Production Vidéo Corporate</option>
-                                <option value="publicite">Publicité & Brand Content</option>
-                                <option value="photo">Photographie Artistique</option>
-                                <option value="direction">Direction Artistique</option>
-                                <option value="postprod">Post-Production Cinéma</option>
-                                <option value="evenement">Couverture Événementielle</option>
-                                <option value="autre">Autre</option>
-                            </select>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn--gold btn--full">Envoyer le message</button>
+                            <p class="form-note">Nous répondons généralement sous 24h ouvrées.</p>
                         </div>
-
-                        <div class="form-group">
-                            <label for="budget" class="form-label">Budget estimé</label>
-                            <select id="budget" name="budget" class="form-input">
-                                <option value="">Sélectionnez une fourchette</option>
-                                <option value="small">&lt; 500,000 FCFA</option>
-                                <option value="medium">500,000 - 1,500,000 FCFA</option>
-                                <option value="large">1,500,000 - 5,000,000 FCFA</option>
-                                <option value="xlarge">&gt; 5,000,000 FCFA</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="form-label">Votre projet *</label>
-                            <textarea id="message" name="message" class="form-textarea" required aria-required="true"
-                                placeholder="Décrivez votre projet, vos objectifs et votre vision..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn--primary btn--full">Envoyer le message</button>
-
-                        <p class="helper-text">
-                            * Champs obligatoires. Nous vous répondrons sous 24-48h.
-                        </p>
                     </form>
                 </div>
             </div>
@@ -160,43 +183,24 @@
                 <h2 class="section-intro__title">Questions Fréquentes</h2>
             </div>
 
-            <div class="faq-list narrow-center">
-                <div class="card card--feature faq-card">
-                    <h4 class="mb-sm">Quel est le délai moyen pour un projet ?</h4>
-                    <p class="text-muted">Le délai varie selon la complexité du projet. En moyenne, comptez 2-4 semaines
-                        pour une production vidéo standard, de la pré-production à la livraison finale.</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 class="faq-title">Quel est le délai moyen ?</h4>
+                    <p class="faq-answer">2 à 4 semaines selon l'envergure du projet, de la conception à la livraison finale.</p>
                 </div>
-
-                <div class="card card--outlined faq-card">
-                    <h4 class="mb-sm">Travaillez-vous uniquement au Bénin ?</h4>
-                    <p class="text-muted">Basés au Bénin, nous intervenons dans toute l'Afrique de l'Ouest et
-                        internationalement pour des projets d'envergure.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">Intervenez-vous à l'étranger ?</h4>
+                    <p class="faq-answer">Oui, bien que basé à Cotonou, RavenArt se déplace dans toute l'Afrique et à l'international.</p>
                 </div>
-
-                <div class="card card--minimal faq-card">
-                    <h4 class="mb-sm">Pourquoi exclusivement en noir & blanc ?</h4>
-                    <p class="text-muted">Le noir & blanc est notre signature artistique. Cette approche monochrome crée
-                        des visuels intemporels, élégants et distinctifs qui se démarquent durablement.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">Pourquoi le noir & blanc ?</h4>
+                    <p class="faq-answer">C'est notre signature. Elle apporte une intemporalité et une force émotionnelle inégalée.</p>
                 </div>
-
-                <div class="card card--feature faq-card">
-                    <h4 class="mb-sm">Proposez-vous des devis personnalisés ?</h4>
-                    <p class="text-muted">Absolument. Chaque projet est unique et mérite une estimation sur mesure.
-                        Contactez-nous avec les détails de votre projet pour recevoir un devis détaillé.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">Les devis sont-ils gratuits ?</h4>
+                    <p class="faq-answer">Absolument. Chaque étude de projet commence par une consultation gratuite.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section">
-        <div class="container text-center">
-            <div class="section-intro section-intro--center">
-                <span class="section-intro__eyebrow">Échange</span>
-                <h2 class="section-intro__title">Prêt à créer quelque chose d'exceptionnel ?</h2>
-                <p class="section-intro__lead">Ne laissez pas votre vision rester dans l'ombre. Donnons-lui vie avec l'excellence RavenArt.</p>
-            </div>
-            <a href="mailto:contact@ravenart.bj" class="btn btn--secondary">contact@ravenart.bj</a>
         </div>
     </section>
 
@@ -213,6 +217,7 @@
                     <h4>Navigation</h4>
                     <a href="/">Accueil</a>
                     <a href="/services.html">Services</a>
+                    <a href="/projects.html">Nos Projets</a>
                     <a href="/about.html">À Propos</a>
                     <a href="/contact.html">Contact</a>
                 </div>
@@ -233,26 +238,11 @@
 
     <script type="module" src="/src/main.js"></script>
     <script>
-        // Simple form handling
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Get form data
-                const formData = new FormData(this);
-                const data = Object.fromEntries(formData);
-
-                // Here you would typically send to a backend
-                console.log('Form submitted:', data);
-
-                // Show success message
-                alert('Merci pour votre message ! Nous vous contacterons très bientôt.');
-
-                // Reset form
-                this.reset();
-            });
-        }
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Merci ! Votre demande a été transmise à notre équipe.');
+            this.reset();
+        });
     </script>
 </body>
 

@@ -1,11 +1,22 @@
 <!doctype html>
+<!--
+ * @author @hopsyder
+ * @organization Nexus Partners
+ * @description Page Services — RavenArt | Agence Audiovisuelle Premium
+ * @created 2026-04-07
+ * @updated 2026-04-07
+ * 🌐 ceo.nexuspartners.xyz
+ * 📧 daoudaabassichristian@gmail.com
+ * ──────────────────────────────────
+-->
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services — RavenArt | Agence Audiovisuelle Premium</title>
+    <title>Services — RavenArt | Agence Audiovisuelle Premium au Bénin</title>
+    <meta name="description" content="Découvrez les services audiovisuels premium de RavenArt : production vidéo, photographie artistique, direction artistique et post-production cinéma à Cotonou, Bénin." />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +28,14 @@
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
+<body class="page-stars">
+    <!-- Fond étoilé ambiance — cohérent avec l'accueil -->
+    <div class="page-stars__bg" aria-hidden="true">
+        <span class="section__stars-layer section__stars-layer--one"></span>
+        <span class="section__stars-layer section__stars-layer--two"></span>
+        <span class="section__stars-layer section__stars-layer--three"></span>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
@@ -49,12 +67,37 @@
         <div class="hero__overlay"></div>
 
         <div class="hero__content hero__content--offset">
+            <span class="services-hero__eyebrow">Savoir-faire RavenArt</span>
             <h1 class="hero__title">Nos Services</h1>
-            <p class="hero__subtitle">Excellence audiovisuelle noir & blanc</p>
+            <p class="hero__subtitle">Excellence audiovisuelle noir &amp; blanc</p>
         </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- ── STATS SOCIAL PROOF ─────────────────────────── -->
+    <section class="section section--stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-item__number" data-target="120">120+</span>
+                    <span class="stat-item__label">Projets réalisés</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-item__number" data-target="5">5 ans</span>
+                    <span class="stat-item__label">D'expertise audiovisuelle</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-item__number" data-target="98">98%</span>
+                    <span class="stat-item__label">Clients satisfaits</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-item__number" data-target="12">12</span>
+                    <span class="stat-item__label">Pays couverts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SERVICES GRID ──────────────────────────────── -->
     <section class="section">
         <div class="container">
             <div class="section-intro">
@@ -63,135 +106,209 @@
                 <p class="section-intro__lead">Chaque offre conserve l'ADN RavenArt, mais avec une présence visuelle et un niveau d'accompagnement adaptés au contexte.</p>
             </div>
 
-            <div class="grid grid--2 grid--staggered">
-                <article class="card card--feature">
-                    <span class="card__kicker">01 / Marque</span>
-                    <h3 class="card__title">Production Vidéo Corporate</h3>
-                    <p class="card__text">Films d'entreprise haut de gamme capturant l'essence de votre marque avec une
-                        esthétique cinématographique noir & blanc. De la conception à la post-production, nous créons
-                        des récits visuels puissants.</p>
-                    <ul class="card__meta-list">
+            <div class="services-grid">
+
+                <!-- 01 -->
+                <article class="service-card service-card--feature">
+                    <div class="service-card__header">
+                        <span class="service-card__kicker">01 / Marque</span>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 10l4.553-2.069A1 1 0 0121 8.87V15.13a1 1 0 01-1.447.9L15 14M3 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card__title">Production Vidéo Corporate</h3>
+                    <p class="service-card__text">Films d'entreprise haut de gamme capturant l'essence de votre marque avec une esthétique cinématographique noir &amp; blanc. De la conception à la post-production, nous créons des récits visuels puissants.</p>
+                    <ul class="service-card__list">
                         <li>Films institutionnels</li>
                         <li>Vidéos de présentation produit</li>
                         <li>Reportages corporate</li>
                         <li>Contenus pour réseaux sociaux</li>
                     </ul>
+                    <a href="/contact.html" class="btn btn--gold service-card__cta">Demander un devis</a>
                 </article>
 
-                <article class="card card--outlined">
-                    <span class="card__kicker">02 / Impact</span>
-                    <h3 class="card__title">Publicité & Brand Content</h3>
-                    <p class="card__text">Spots publicitaires et contenus de marque qui se démarquent par leur
-                        sophistication visuelle. Chaque frame est pensé comme une œuvre d'art monochrome.</p>
-                    <ul class="card__meta-list">
-                        <li>Spots TV & digital</li>
-                        <li>Campaignes brandées</li>
+                <!-- 02 -->
+                <article class="service-card service-card--outlined">
+                    <div class="service-card__header">
+                        <span class="service-card__kicker">02 / Impact</span>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card__title">Publicité &amp; Brand Content</h3>
+                    <p class="service-card__text">Spots publicitaires et contenus de marque qui se démarquent par leur sophistication visuelle. Chaque frame est pensé comme une œuvre d'art monochrome.</p>
+                    <ul class="service-card__list">
+                        <li>Spots TV &amp; digital</li>
+                        <li>Campagnes brandées</li>
                         <li>Séries de contenu</li>
                         <li>Motion design premium</li>
                     </ul>
+                    <a href="/contact.html" class="btn btn--gold service-card__cta">Demander un devis</a>
                 </article>
 
-                <article class="card card--minimal">
-                    <span class="card__kicker">03 / Regard</span>
-                    <h3 class="card__title">Photographie Artistique</h3>
-                    <p class="card__text">Portraits et reportages photographiques en noir & blanc qui transcendent le
-                        temps. Notre approche artistique transforme chaque instant en image intemporelle.</p>
-                    <ul class="card__meta-list">
+                <!-- 03 -->
+                <article class="service-card service-card--minimal">
+                    <div class="service-card__header">
+                        <span class="service-card__kicker">03 / Regard</span>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card__title">Photographie Artistique</h3>
+                    <p class="service-card__text">Portraits et reportages photographiques en noir &amp; blanc qui transcendent le temps. Notre approche artistique transforme chaque instant en image intemporelle.</p>
+                    <ul class="service-card__list">
                         <li>Portraits professionnels</li>
                         <li>Couverture d'événements</li>
                         <li>Photographie de mode</li>
-                        <li>Lookbooks & éditoriaux</li>
+                        <li>Lookbooks &amp; éditoriaux</li>
                     </ul>
+                    <a href="/contact.html" class="btn btn--gold service-card__cta">Demander un devis</a>
                 </article>
 
-                <article class="card card--feature">
-                    <span class="card__kicker">04 / Cohérence</span>
-                    <h3 class="card__title">Direction Artistique</h3>
-                    <p class="card__text">Conception visuelle complète pour projets ambitieux. Nous définissons
-                        l'identité visuelle de vos productions avec une cohérence esthétique irréprochable.</p>
-                    <ul class="card__meta-list">
+                <!-- 04 -->
+                <article class="service-card service-card--feature">
+                    <div class="service-card__header">
+                        <span class="service-card__kicker">04 / Cohérence</span>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card__title">Direction Artistique</h3>
+                    <p class="service-card__text">Conception visuelle complète pour projets ambitieux. Nous définissons l'identité visuelle de vos productions avec une cohérence esthétique irréprochable.</p>
+                    <ul class="service-card__list">
                         <li>Identité visuelle de projet</li>
-                        <li>Styling & art direction</li>
+                        <li>Styling &amp; art direction</li>
                         <li>Supervision créative</li>
                         <li>Consulting esthétique</li>
                     </ul>
+                    <a href="/contact.html" class="btn btn--gold service-card__cta">Demander un devis</a>
                 </article>
 
-                <article class="card card--outlined">
-                    <span class="card__kicker">05 / Finition</span>
-                    <h3 class="card__title">Post-Production Cinéma</h3>
-                    <p class="card__text">Étalonnage noir & blanc expert, montage narratif et finition professionnelle.
-                        Chaque détail est peaufiné pour atteindre la perfection visuelle.</p>
-                    <ul class="card__meta-list">
-                        <li>Étalonnage B&W cinéma</li>
+                <!-- 05 -->
+                <article class="service-card service-card--outlined">
+                    <div class="service-card__header">
+                        <span class="service-card__kicker">05 / Finition</span>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card__title">Post-Production Cinéma</h3>
+                    <p class="service-card__text">Étalonnage noir &amp; blanc expert, montage narratif et finition professionnelle. Chaque détail est peaufiné pour atteindre la perfection visuelle.</p>
+                    <ul class="service-card__list">
+                        <li>Étalonnage B&amp;W cinéma</li>
                         <li>Montage narratif</li>
                         <li>Sound design</li>
                         <li>Color grading avancé</li>
                     </ul>
+                    <a href="/contact.html" class="btn btn--gold service-card__cta">Demander un devis</a>
                 </article>
 
-                <article class="card card--minimal">
-                    <span class="card__kicker">06 / Présence</span>
-                    <h3 class="card__title">Couverture Événementielle</h3>
-                    <p class="card__text">Captation vidéo et photo de vos événements avec une approche documentaire
-                        artistique. Galas, conférences, lancements — immortalisés avec élégance.</p>
-                    <ul class="card__meta-list">
+                <!-- 06 -->
+                <article class="service-card service-card--minimal">
+                    <div class="service-card__header">
+                        <span class="service-card__kicker">06 / Présence</span>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card__title">Couverture Événementielle</h3>
+                    <p class="service-card__text">Captation vidéo et photo de vos événements avec une approche documentaire artistique. Galas, conférences, lancements — immortalisés avec élégance.</p>
+                    <ul class="service-card__list">
                         <li>Événements corporate</li>
-                        <li>Galas & cérémonies</li>
+                        <li>Galas &amp; cérémonies</li>
                         <li>Lancements de produits</li>
-                        <li>Conférences & panels</li>
+                        <li>Conférences &amp; panels</li>
                     </ul>
+                    <a href="/contact.html" class="btn btn--gold service-card__cta">Demander un devis</a>
                 </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- ── MÉTHODE ─────────────────────────────────────── -->
     <section class="section section--alternate">
         <div class="container container--narrow">
             <div class="section-intro section-intro--center">
                 <span class="section-intro__eyebrow">Méthode</span>
-                <h2 class="section-intro__title">Notre Méthode</h2>
-                <p class="section-intro__lead">Un déroulé rigoureux, présenté comme une suite de séquences plutôt qu'une liste purement fonctionnelle.</p>
+                <h2 class="section-intro__title">Notre Processus</h2>
+                <p class="section-intro__lead">Un déroulé rigoureux, pensé comme une suite de séquences cinématographiques.</p>
             </div>
 
             <div class="method-grid">
                 <div class="method-step">
+                    <div class="method-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
                     <span class="method-step__index">01</span>
                     <h5>Découverte</h5>
                     <p class="text-muted">Brief approfondi et compréhension de votre vision.</p>
                 </div>
 
                 <div class="method-step">
+                    <div class="method-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
                     <span class="method-step__index">02</span>
                     <h5>Conception</h5>
                     <p class="text-muted">Scénarisation et direction artistique sur mesure.</p>
                 </div>
 
                 <div class="method-step">
+                    <div class="method-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            <circle cx="12" cy="13" r="3"/>
+                        </svg>
+                    </div>
                     <span class="method-step__index">03</span>
                     <h5>Production</h5>
                     <p class="text-muted">Tournage professionnel avec équipement cinéma.</p>
                 </div>
 
                 <div class="method-step">
+                    <div class="method-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 3l14 9-14 9V3z"/>
+                        </svg>
+                    </div>
                     <span class="method-step__index">04</span>
                     <h5>Post-Production</h5>
-                    <p class="text-muted">Montage, étalonnage B&W et livraison premium.</p>
+                    <p class="text-muted">Montage, étalonnage B&amp;W et livraison premium.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section">
+    <!-- ── CTA FINAL DOUBLE ────────────────────────────── -->
+    <section class="section section--cta-final">
         <div class="container text-center">
             <div class="section-intro section-intro--center">
                 <span class="section-intro__eyebrow">Lancement</span>
                 <h2 class="section-intro__title">Prêt à créer quelque chose d'exceptionnel ?</h2>
                 <p class="section-intro__lead">Discutons de votre projet et donnons vie à votre vision avec l'excellence RavenArt.</p>
             </div>
-            <a href="/contact.html" class="btn btn--primary">Démarrer un projet</a>
+            <div class="cta-final__actions">
+                <a href="/contact.html" class="btn btn--gold">Démarrer un projet</a>
+                <a href="/projects.html" class="btn btn--secondary">Voir nos réalisations</a>
+            </div>
         </div>
     </section>
 
@@ -201,13 +318,14 @@
             <div class="footer__content">
                 <div class="footer__section">
                     <h4>RavenArt</h4>
-                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir & blanc.</p>
+                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir &amp; blanc.</p>
                 </div>
 
                 <div class="footer__section">
                     <h4>Navigation</h4>
                     <a href="/">Accueil</a>
                     <a href="/services.html">Services</a>
+                    <a href="/projects.html">Nos Projets</a>
                     <a href="/about.html">À Propos</a>
                     <a href="/contact.html">Contact</a>
                 </div>

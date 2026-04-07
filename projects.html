@@ -1,11 +1,23 @@
 <!doctype html>
+<!--
+ * @author @hopsyder
+ * @organization Nexus Partners
+ * @description Page Nos Projets — RavenArt | Portfolio Cinématographique
+ * @created 2026-04-07
+ * @updated 2026-04-07
+ * 🌐 ceo.nexuspartners.xyz
+ * 📧 daoudaabassichristian@gmail.com
+ * ──────────────────────────────────
+-->
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nos Projets — RavenArt | Portfolio Vidéo</title>
+    <title>Nos Projets — RavenArt | Portfolio Audiovisuel Cinématographique</title>
+    <meta name="description"
+        content="Découvrez le portfolio audiovisuel de RavenArt : films corporate, événementiels, branding video et photographie artistique en noir & blanc depuis Cotonou, Bénin." />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +29,14 @@
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
+<body class="page-stars">
+    <!-- Fond étoilé ambiance cinématographique -->
+    <div class="page-stars__bg" aria-hidden="true">
+        <span class="section__stars-layer section__stars-layer--one"></span>
+        <span class="section__stars-layer section__stars-layer--two"></span>
+        <span class="section__stars-layer section__stars-layer--three"></span>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="container navbar__container">
@@ -41,174 +60,303 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ── HERO ──────────────────────────────────────── -->
     <section class="hero hero--short">
         <video class="hero__video" autoplay muted loop playsinline>
-            <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
+            <source src="/public/video-mobile/ravenart.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay"></div>
 
         <div class="hero__content hero__content--offset">
+            <span class="services-hero__eyebrow">Portfolio RavenArt</span>
             <h1 class="hero__title">Nos Projets</h1>
-            <p class="hero__subtitle">Portfolio vidéo noir & blanc</p>
+            <p class="hero__subtitle">120+ réalisations — noir &amp; blanc</p>
         </div>
     </section>
 
-    <!-- Filter Section -->
-    <section class="section section--tight">
+    <!-- ── FILTER BAR PREMIUM ─────────────────────────── -->
+    <section class="section section--filter">
         <div class="container">
-            <div class="filter-bar" role="group" aria-label="Filtrer les projets">
-                <button class="btn btn--primary filter-btn" data-filter="all" aria-pressed="true">Tous les
-                    Projets</button>
-                <button class="btn btn--secondary filter-btn" data-filter="evenementiel"
-                    aria-pressed="false">Événementiel</button>
-                <button class="btn btn--secondary filter-btn" data-filter="branding" aria-pressed="false">Branding
-                    Video</button>
+            <div class="filter-bar" role="group" aria-label="Filtrer les projets par catégorie">
+                <button class="filter-pill filter-pill--active" data-filter="all" aria-pressed="true">
+                    <span class="filter-pill__dot"></span>
+                    Tous
+                </button>
+                <button class="filter-pill" data-filter="evenementiel" aria-pressed="false">
+                    <span class="filter-pill__dot"></span>
+                    Événementiel
+                </button>
+                <button class="filter-pill" data-filter="branding" aria-pressed="false">
+                    <span class="filter-pill__dot"></span>
+                    Branding Vidéo
+                </button>
+                <button class="filter-pill" data-filter="portrait" aria-pressed="false">
+                    <span class="filter-pill__dot"></span>
+                    Portrait
+                </button>
+                <button class="filter-pill" data-filter="mode" aria-pressed="false">
+                    <span class="filter-pill__dot"></span>
+                    Mode &amp; Art
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Desktop View Section -->
+    <!-- ── GALERIE DESKTOP — Format Horizontal ───────── -->
     <section class="section section--flush-top">
         <div class="container">
-            <div class="section-intro section-intro--center">
+            <div class="section-intro">
                 <span class="section-intro__eyebrow">Horizontal</span>
-                <h2 class="section-intro__title">Vue Desktop</h2>
-                <p class="section-intro__lead">Des formats larges, pensés comme des affiches animées plutôt que comme de simples miniatures.</p>
+                <h2 class="section-intro__title">Formats Cinématographiques</h2>
+                <p class="section-intro__lead">Films larges, pensés comme des affiches animées — chaque cadre raconte une histoire.</p>
             </div>
 
-            <div class="grid grid--2 grid--staggered" id="desktop-videos">
-                <!-- Événementiel Videos -->
-                <article class="video-card" data-category="evenementiel">
-                    <div class="video-placeholder">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Vidéo Événementiel 1</p>
+            <div class="portfolio-masonry" id="desktop-gallery">
+
+                <!-- Grand item — occupe 2 colonnes -->
+                <article class="portfolio-item portfolio-item--wide" data-category="evenementiel">
+                    <div class="portfolio-item__media">
+                        <div class="portfolio-item__visual portfolio-item__visual--gradient-1"></div>
+                        <div class="portfolio-item__overlay">
+                            <div class="portfolio-item__play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Gala Corporate 2025</h3>
-                        <p class="video-card__category text-accent">Événementiel</p>
-                        <p class="video-card__description">Captation complète d'un gala d'entreprise avec approche
-                            cinématographique noir & blanc.</p>
+                    <div class="portfolio-item__info">
+                        <span class="portfolio-item__tag portfolio-item__tag--gold">Événementiel</span>
+                        <h3 class="portfolio-item__title">Gala Corporate Supranational 2025</h3>
+                        <p class="portfolio-item__desc">Captation complète d'un gala d'entreprise avec approche cinématographique noir &amp; blanc — lumière sculptée, silhouettes fortes.</p>
+                        <div class="portfolio-item__meta">
+                            <span>2025</span>
+                            <span>•</span>
+                            <span>Film 4K</span>
+                        </div>
                     </div>
                 </article>
 
-                <article class="video-card" data-category="branding">
-                    <div class="video-placeholder">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Vidéo Branding 1</p>
+                <!-- Items standard -->
+                <article class="portfolio-item" data-category="branding">
+                    <div class="portfolio-item__media">
+                        <div class="portfolio-item__visual portfolio-item__visual--gradient-2"></div>
+                        <div class="portfolio-item__overlay">
+                            <div class="portfolio-item__play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Identité Visuelle Luxe</h3>
-                        <p class="video-card__category text-accent">Branding Video</p>
-                        <p class="video-card__description">Film de marque pour une maison de luxe, esthétique
-                            minimaliste intemporelle.</p>
-                    </div>
-                </article>
-
-                <article class="video-card" data-category="evenementiel">
-                    <div class="video-placeholder">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Vidéo Événementiel 2</p>
-                    </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Conférence Innovation</h3>
-                        <p class="video-card__category text-accent">Événementiel</p>
-                        <p class="video-card__description">Couverture vidéo d'une conférence tech avec storytelling
-                            visuel premium.</p>
+                    <div class="portfolio-item__info">
+                        <span class="portfolio-item__tag">Branding</span>
+                        <h3 class="portfolio-item__title">Identité Visuelle Maison de Luxe</h3>
+                        <p class="portfolio-item__desc">Film de marque esthétique minimaliste intemporelle.</p>
+                        <div class="portfolio-item__meta">
+                            <span>2025</span><span>•</span><span>Brand Film</span>
+                        </div>
                     </div>
                 </article>
 
-                <article class="video-card" data-category="branding">
-                    <div class="video-placeholder">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Vidéo Branding 2</p>
+                <article class="portfolio-item" data-category="portrait">
+                    <div class="portfolio-item__media">
+                        <div class="portfolio-item__visual portfolio-item__visual--gradient-3"></div>
+                        <div class="portfolio-item__overlay">
+                            <div class="portfolio-item__play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Campagne Publicitaire</h3>
-                        <p class="video-card__category text-accent">Branding Video</p>
-                        <p class="video-card__description">Spot publicitaire noir & blanc pour lancement de produit haut
-                            de gamme.</p>
+                    <div class="portfolio-item__info">
+                        <span class="portfolio-item__tag">Portrait</span>
+                        <h3 class="portfolio-item__title">Série Éditoriale Dirigeantes</h3>
+                        <p class="portfolio-item__desc">Portraits à forte présence pour femmes leaders du Bénin.</p>
+                        <div class="portfolio-item__meta">
+                            <span>2024</span><span>•</span><span>Photo + Vidéo</span>
+                        </div>
                     </div>
                 </article>
+
+                <article class="portfolio-item" data-category="evenementiel">
+                    <div class="portfolio-item__media">
+                        <div class="portfolio-item__visual portfolio-item__visual--gradient-4"></div>
+                        <div class="portfolio-item__overlay">
+                            <div class="portfolio-item__play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item__info">
+                        <span class="portfolio-item__tag portfolio-item__tag--gold">Événementiel</span>
+                        <h3 class="portfolio-item__title">Conférence Innovation Tech</h3>
+                        <p class="portfolio-item__desc">Couverture vidéo premium avec storytelling visuel immersif.</p>
+                        <div class="portfolio-item__meta">
+                            <span>2024</span><span>•</span><span>Reportage</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item portfolio-item--tall" data-category="mode">
+                    <div class="portfolio-item__media">
+                        <div class="portfolio-item__visual portfolio-item__visual--gradient-5"></div>
+                        <div class="portfolio-item__overlay">
+                            <div class="portfolio-item__play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item__info">
+                        <span class="portfolio-item__tag">Mode &amp; Art</span>
+                        <h3 class="portfolio-item__title">Lookbook Monochrome</h3>
+                        <p class="portfolio-item__desc">Direction artistique sobre et précise pour une identité forte.</p>
+                        <div class="portfolio-item__meta">
+                            <span>2025</span><span>•</span><span>Lookbook</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item" data-category="branding">
+                    <div class="portfolio-item__media">
+                        <div class="portfolio-item__visual portfolio-item__visual--gradient-6"></div>
+                        <div class="portfolio-item__overlay">
+                            <div class="portfolio-item__play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item__info">
+                        <span class="portfolio-item__tag">Branding</span>
+                        <h3 class="portfolio-item__title">Campagne Publicitaire Prestige</h3>
+                        <p class="portfolio-item__desc">Spot noir &amp; blanc pour lancement produit haut de gamme.</p>
+                        <div class="portfolio-item__meta">
+                            <span>2024</span><span>•</span><span>Spot 30s</span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Mobile View Section -->
+    <!-- ── GALERIE MOBILE — Format Vertical ────────────── -->
     <section class="section section--alternate">
         <div class="container">
             <div class="section-intro section-intro--center">
-                <span class="section-intro__eyebrow">Vertical</span>
-                <h2 class="section-intro__title">Vue Mobile</h2>
-                <p class="section-intro__lead">Une seconde cadence visuelle, plus étroite, plus directe, pensée pour les usages sociaux et les écrans verticaux.</p>
+                <span class="section-intro__eyebrow">Vertical / Social</span>
+                <h2 class="section-intro__title">Formats Mobiles &amp; Réseaux</h2>
+                <p class="section-intro__lead">Contenus verticaux premium pour Instagram, TikTok et Reels — même exigence cinématographique, autre cadre.</p>
             </div>
 
-            <div class="grid grid--2 grid--staggered" id="mobile-videos">
-                <!-- Événementiel Videos - Mobile Format -->
-                <article class="video-card" data-category="evenementiel">
-                    <div class="video-placeholder video-placeholder--mobile">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Format Vertical</p>
+            <div class="mobile-gallery" id="mobile-gallery">
+
+                <article class="mobile-item" data-category="evenementiel">
+                    <div class="mobile-item__frame">
+                        <video class="mobile-item__video" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="mobile-item__badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                <path d="M12 2C8 2 4 6 4 12s4 10 8 10 8-4 8-10S16 2 12 2M8 12l3 3 5-5"/>
+                            </svg>
+                            Événementiel
+                        </div>
                     </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Story Instagram Événement</h3>
-                        <p class="video-card__category text-accent">Événementiel</p>
-                        <p class="video-card__description">Contenu vertical optimisé pour réseaux sociaux, format story
-                            Instagram.</p>
+                    <div class="mobile-item__info">
+                        <h3 class="mobile-item__title">Story Instagram Événement</h3>
+                        <p class="mobile-item__desc">Contenu vertical optimisé réseaux sociaux.</p>
                     </div>
                 </article>
 
-                <article class="video-card" data-category="branding">
-                    <div class="video-placeholder video-placeholder--mobile">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Format Vertical</p>
+                <article class="mobile-item" data-category="branding">
+                    <div class="mobile-item__frame">
+                        <video class="mobile-item__video" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="mobile-item__badge">Branding</div>
                     </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Reel TikTok Marque</h3>
-                        <p class="video-card__category text-accent">Branding Video</p>
-                        <p class="video-card__description">Vidéo branding verticale pour TikTok, esthétique monochrome
-                            impactante.</p>
-                    </div>
-                </article>
-
-                <article class="video-card" data-category="evenementiel">
-                    <div class="video-placeholder video-placeholder--mobile">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Format Vertical</p>
-                    </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Behind The Scenes</h3>
-                        <p class="video-card__category text-accent">Événementiel</p>
-                        <p class="video-card__description">Coulisses d'événement en format vertical, immersion
-                            authentique.</p>
+                    <div class="mobile-item__info">
+                        <h3 class="mobile-item__title">Reel TikTok Marque</h3>
+                        <p class="mobile-item__desc">Esthétique monochrome impactante en format court.</p>
                     </div>
                 </article>
 
-                <article class="video-card" data-category="branding">
-                    <div class="video-placeholder video-placeholder--mobile">
-                        <div class="video-placeholder__icon">▶</div>
-                        <p class="video-placeholder__text">Format Vertical</p>
+                <article class="mobile-item" data-category="evenementiel">
+                    <div class="mobile-item__frame">
+                        <video class="mobile-item__video" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="mobile-item__badge portfolio-item__tag--gold">Événementiel</div>
                     </div>
-                    <div class="video-card__info">
-                        <h3 class="video-card__title">Teaser Produit Mobile</h3>
-                        <p class="video-card__category text-accent">Branding Video</p>
-                        <p class="video-card__description">Teaser vertical pour lancement produit, optimisé mobile
-                            first.</p>
+                    <div class="mobile-item__info">
+                        <h3 class="mobile-item__title">Behind The Scenes</h3>
+                        <p class="mobile-item__desc">Coulisses d'événement, immersion authentique.</p>
                     </div>
                 </article>
+
+                <article class="mobile-item" data-category="branding">
+                    <div class="mobile-item__frame">
+                        <video class="mobile-item__video" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="mobile-item__badge">Branding</div>
+                    </div>
+                    <div class="mobile-item__info">
+                        <h3 class="mobile-item__title">Teaser Produit Mobile</h3>
+                        <p class="mobile-item__desc">Lancement produit optimisé mobile-first.</p>
+                    </div>
+                </article>
+
+                <article class="mobile-item" data-category="mode">
+                    <div class="mobile-item__frame">
+                        <video class="mobile-item__video" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="mobile-item__badge">Mode &amp; Art</div>
+                    </div>
+                    <div class="mobile-item__info">
+                        <h3 class="mobile-item__title">Fashion Film Vertical</h3>
+                        <p class="mobile-item__desc">Capsule mode en noir &amp; blanc, format story premium.</p>
+                    </div>
+                </article>
+
+                <article class="mobile-item" data-category="portrait">
+                    <div class="mobile-item__frame">
+                        <video class="mobile-item__video" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="mobile-item__badge">Portrait</div>
+                    </div>
+                    <div class="mobile-item__info">
+                        <h3 class="mobile-item__title">Portrait Cinématographique</h3>
+                        <p class="mobile-item__desc">Séquence portrait pour réseaux, lumière dramatique.</p>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section">
+    <!-- ── CTA FINAL DOUBLE ───────────────────────────── -->
+    <section class="section section--cta-final">
         <div class="container text-center">
             <div class="section-intro section-intro--center">
                 <span class="section-intro__eyebrow">Projection</span>
                 <h2 class="section-intro__title">Vous avez un projet vidéo ?</h2>
-                <p class="section-intro__lead">Transformons votre vision en réalité cinématographique noir & blanc.</p>
+                <p class="section-intro__lead">Transformons votre vision en réalité cinématographique noir &amp; blanc.</p>
             </div>
-            <a href="/contact.html" class="btn btn--primary">Démarrer un projet</a>
+            <div class="cta-final__actions">
+                <a href="/contact.html" class="btn btn--gold">Démarrer un projet</a>
+                <a href="/services.html" class="btn btn--secondary">Voir nos services</a>
+            </div>
         </div>
     </section>
 
@@ -218,9 +366,8 @@
             <div class="footer__content">
                 <div class="footer__section">
                     <h4>RavenArt</h4>
-                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir & blanc.</p>
+                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir &amp; blanc.</p>
                 </div>
-
                 <div class="footer__section">
                     <h4>Navigation</h4>
                     <a href="/">Accueil</a>
@@ -229,7 +376,6 @@
                     <a href="/about.html">À Propos</a>
                     <a href="/contact.html">Contact</a>
                 </div>
-
                 <div class="footer__section">
                     <h4>Contact</h4>
                     <p>Cotonou, Bénin</p>
@@ -237,7 +383,6 @@
                     <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
                 </div>
             </div>
-
             <div class="footer__bottom">
                 <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
             </div>
@@ -246,44 +391,38 @@
 
     <script type="module" src="/src/main.js"></script>
     <script>
-        // Video Filtering Logic
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const allVideoCards = document.querySelectorAll('.video-card');
+        /**
+         * @description Logique de filtrage des projets avec animation fluide
+         * — Filtre les deux galeries (desktop + mobile) simultanément
+         */
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const allItems = document.querySelectorAll('.portfolio-item, .mobile-item');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filterValue = button.getAttribute('data-filter');
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                const filter = pill.getAttribute('data-filter');
 
-                // Update button states
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('btn--primary');
-                    btn.classList.add('btn--secondary');
-                    btn.setAttribute('aria-pressed', 'false');
+                // Mettre à jour les pills actifs
+                filterPills.forEach(p => {
+                    p.classList.remove('filter-pill--active');
+                    p.setAttribute('aria-pressed', 'false');
                 });
-                button.classList.remove('btn--secondary');
-                button.classList.add('btn--primary');
-                button.setAttribute('aria-pressed', 'true');
+                pill.classList.add('filter-pill--active');
+                pill.setAttribute('aria-pressed', 'true');
 
-                // Filter videos
-                allVideoCards.forEach(card => {
-                    const category = card.getAttribute('data-category');
+                // Filtrer avec animation
+                allItems.forEach(item => {
+                    const cat = item.getAttribute('data-category');
+                    const match = filter === 'all' || cat === filter;
 
-                    if (filterValue === 'all' || category === filterValue) {
-                        card.classList.remove('video-card--hidden');
-                        card.classList.remove('video-card--filtered-in');
-                        void card.offsetWidth;
-                        card.classList.add('video-card--filtered-in');
+                    if (match) {
+                        item.classList.remove('portfolio-item--hidden');
+                        item.classList.add('portfolio-item--visible');
                     } else {
-                        card.classList.remove('video-card--filtered-in');
-                        card.classList.add('video-card--hidden');
+                        item.classList.remove('portfolio-item--visible');
+                        item.classList.add('portfolio-item--hidden');
                     }
                 });
-            });
-        });
-
-        allVideoCards.forEach(card => {
-            card.addEventListener('animationend', () => {
-                card.classList.remove('video-card--filtered-in');
             });
         });
     </script>
