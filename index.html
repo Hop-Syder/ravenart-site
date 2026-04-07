@@ -2,193 +2,305 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RavenArt — Agence Audiovisuelle Premium au Bénin</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RavenArt — Agence Audiovisuelle Premium au Bénin</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="navbar" role="navigation" aria-label="Navigation principale">
-    <div class="container navbar__container">
-      <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
-        <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
-      </a>
-
-      <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="navbar__menu">
-        <li><a href="/" class="navbar__link navbar__link--active">Accueil</a></li>
-        <li><a href="/services.html" class="navbar__link">Services</a></li>
-        <li><a href="/projects.html" class="navbar__link">Nos Projets</a></li>
-        <li><a href="/about.html" class="navbar__link">À Propos</a></li>
-        <li><a href="/contact.html" class="navbar__link">Contact</a></li>
-      </ul>
+<body class="page-stars">
+    <div class="page-stars__bg" aria-hidden="true">
+        <span class="section__stars-layer section__stars-layer--one"></span>
+        <span class="section__stars-layer section__stars-layer--two"></span>
+        <span class="section__stars-layer section__stars-layer--three"></span>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <video class="hero__video" autoplay muted loop playsinline>
-      <source src="public/video-mobile/ravenart.mp4" type="video/mp4">
-    </video>
-    <div class="hero__overlay"></div>
 
-    <div class="hero__content">
-      <h1 class="hero__title">RAVENART</h1>
-      <p class="hero__subtitle">Agence Audiovisuelle</p>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="container navbar__container">
+            <a href="/" class="navbar__logo" aria-label="RavenArt - Accueil">
+                <img src="/public/logo-ravenart.png" alt="RavenArt Logo" class="navbar__logo-image">
+            </a>
 
-      <div class="hero__cta">
-        <a href="/services.html" class="btn btn--primary">Découvrir nos services</a>
-        <a href="/contact.html" class="btn btn--secondary">Nous contacter</a>
-      </div>
-    </div>
-  </section>
+            <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-  <!-- Services Preview Section -->
-  <section class="section section--alternate">
-    <div class="container">
-      <div class="section-intro section-intro--center">
-        <span class="section-intro__eyebrow">Savoir-faire</span>
-        <h2 class="section-intro__title">Nos Expertises</h2>
-        <p class="section-intro__lead">Trois registres créatifs, trois rythmes d'exécution, une même exigence
-          cinématographique.</p>
-      </div>
+            <ul class="navbar__menu">
+                <li><a href="/" class="navbar__link navbar__link--active">Accueil</a></li>
+                <li><a href="/services.html" class="navbar__link">Services</a></li>
+                <li><a href="/projects.html" class="navbar__link">Nos Projets</a></li>
+                <li><a href="/about.html" class="navbar__link">À Propos</a></li>
+                <li><a href="/contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-      <div class="grid grid--3 grid--staggered">
-        <article class="card card--feature">
-          <span class="card__kicker">Signature</span>
-          <h3 class="card__title">Production Vidéo</h3>
-          <p class="card__text">Films corporate, publicités et contenus cinématographiques en noir & blanc d'exception.
-          </p>
-          <ul class="card__meta-list">
-            <li>Films de marque</li>
-            <li>Campagnes premium</li>
-            <li>Formats longs et courts</li>
-          </ul>
-        </article>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
 
-        <article class="card card--outlined">
-          <span class="card__kicker">Présence</span>
-          <h3 class="card__title">Photographie Artistique</h3>
-          <p class="card__text">Portraits, événements et storytelling visuel avec une esthétique intemporelle.</p>
-          <ul class="card__meta-list">
-            <li>Portraits éditoriaux</li>
-            <li>Textures de lumière</li>
-            <li>Récits visuels durables</li>
-          </ul>
-        </article>
+        <div class="hero__content">
+            <h1 class="hero__title">RAVENART</h1>
+            <p class="hero__subtitle">Agence Audiovisuelle</p>
 
-        <article class="card card--minimal">
-          <span class="card__kicker">Vision</span>
-          <h3 class="card__title">Direction Artistique</h3>
-          <p class="card__text">Conception visuelle premium pour marques exigeantes recherchant l'excellence.</p>
-          <ul class="card__meta-list">
-            <li>Univers de campagne</li>
-            <li>Supervision créative</li>
-            <li>Cadres visuels cohérents</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="text-center">
-        <a href="/services.html" class="btn btn--secondary">Voir tous les services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Preview -->
-  <section class="section">
-    <div class="container">
-      <div class="section-intro">
-        <span class="section-intro__eyebrow">En lumière</span>
-        <h2 class="section-intro__title">Réalisations Récentes</h2>
-        <p class="section-intro__lead">Des cadres plus éditoriaux, avec un jeu de tailles et de rythmes moins mécanique
-          que la simple grille 2 colonnes.</p>
-      </div>
-
-      <div class="project-preview-grid">
-        <article class="project-preview-card">
-          <div class="project-preview-card__body">
-            <span class="project-preview-card__label">Campagne</span>
-            <h3 class="project-preview-card__title">Narration de marque à fort contraste</h3>
-            <p class="project-preview-card__text">Une écriture visuelle pensée comme un film court, entre silence,
-              regard et matière.</p>
-          </div>
-        </article>
-
-        <div class="project-preview-stack">
-          <article class="project-preview-card project-preview-card--compact">
-            <div class="project-preview-card__body">
-              <span class="project-preview-card__label">Événement</span>
-              <h3 class="project-preview-card__title">Couverture de gala</h3>
-              <p class="project-preview-card__text">Rythme documentaire, silhouettes fortes et captation élégante.</p>
+            <div class="hero__cta">
+                <a href="/services.html" class="btn btn--primary">Découvrir nos services</a>
+                <a href="/contact.html" class="btn btn--secondary">Nous contacter</a>
             </div>
-          </article>
+        </div>
+    </section>
 
-          <article class="project-preview-card project-preview-card--compact">
-            <div class="project-preview-card__body">
-              <span class="project-preview-card__label">Portrait</span>
-              <h3 class="project-preview-card__title">Série éditoriale</h3>
-              <p class="project-preview-card__text">Des images construites pour durer au-delà du simple effet de mode.
-              </p>
+    <!-- Services Preview Section -->
+    <section class="section section--alternate section--services-cover">
+        <div class="section__backdrop"></div>
+        <div class="container section__content-layer">
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Savoir-faire</span>
+                <h2 class="section-intro__title">Nos Expertises</h2>
+                <p class="section-intro__lead">Trois registres créatifs, trois rythmes d'exécution, une même exigence
+                    cinématographique.</p>
             </div>
-          </article>
+
+            <div class="grid grid--3 grid--staggered">
+                <article class="card card--feature">
+                    <span class="card__kicker">Signature</span>
+                    <h3 class="card__title">Production Vidéo</h3>
+                    <p class="card__text">Films corporate, publicités et contenus cinématographiques en noir & blanc
+                        d'exception.
+                    </p>
+                    <ul class="card__meta-list">
+                        <li>Films de marque</li>
+                        <li>Campagnes premium</li>
+                        <li>Formats longs et courts</li>
+                    </ul>
+                </article>
+
+                <article class="card card--outlined">
+                    <span class="card__kicker">Présence</span>
+                    <h3 class="card__title">Photographie Artistique</h3>
+                    <p class="card__text">Portraits, événements et storytelling visuel avec une esthétique intemporelle.
+                    </p>
+                    <ul class="card__meta-list">
+                        <li>Portraits éditoriaux</li>
+                        <li>Textures de lumière</li>
+                        <li>Récits visuels durables</li>
+                    </ul>
+                </article>
+
+                <article class="card card--minimal">
+                    <span class="card__kicker">Vision</span>
+                    <h3 class="card__title">Direction Artistique</h3>
+                    <p class="card__text">Conception visuelle premium pour marques exigeantes recherchant l'excellence.
+                    </p>
+                    <ul class="card__meta-list">
+                        <li>Univers de campagne</li>
+                        <li>Supervision créative</li>
+                        <li>Cadres visuels cohérents</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="text-center section-cta">
+                <a href="/services.html" class="btn btn--secondary">Voir tous les services</a>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="text-center" style="margin-top: var(--space-2xl);">
-        <a href="/services.html" class="btn btn--beige">Explorer le portfolio</a>
-      </div>
-    </div>
-  </section>
+    <!-- Portfolio Preview -->
+    <section class="section">
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__section">
-          <h4>RavenArt</h4>
-          <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir & blanc.</p>
+        <div class="container">
+            <div class="section-intro">
+                <span class="section-intro__eyebrow">En lumière</span>
+                <h2 class="section-intro__title">Réalisations Récentes</h2>
+                <p class="section-intro__lead">Des cadres plus éditoriaux, avec un jeu de tailles et de rythmes moins
+                    mécanique
+                    que la simple grille 2 colonnes.</p>
+            </div>
+
+            <div class="project-preview-grid">
+                <article class="project-preview-card">
+                    <div class="project-preview-card__body">
+                        <span class="project-preview-card__label">Campagne</span>
+                        <h3 class="project-preview-card__title">Narration de marque à fort contraste</h3>
+                        <p class="project-preview-card__text">Une écriture visuelle pensée comme un film court, entre
+                            silence,
+                            regard et matière.</p>
+                    </div>
+                </article>
+
+                <div class="project-preview-stack">
+                    <article class="project-preview-card project-preview-card--compact">
+                        <div class="project-preview-card__body">
+                            <span class="project-preview-card__label">Événement</span>
+                            <h3 class="project-preview-card__title">Couverture de gala</h3>
+                            <p class="project-preview-card__text">Rythme documentaire, silhouettes fortes et captation
+                                élégante.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-preview-card project-preview-card--compact">
+                        <div class="project-preview-card__body">
+                            <span class="project-preview-card__label">Portrait</span>
+                            <h3 class="project-preview-card__title">Série éditoriale</h3>
+                            <p class="project-preview-card__text">Des images construites pour durer au-delà du simple
+                                effet de mode.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="text-center portfolio-preview__cta">
+                <a href="/services.html" class="btn btn--beige">Explorer le portfolio</a>
+            </div>
         </div>
+    </section>
 
-        <div class="footer__section">
-          <h4>Navigation</h4>
-          <a href="/">Accueil</a>
-          <a href="/services.html">Services</a>
-          <a href="/about.html">À Propos</a>
-          <a href="/contact.html">Contact</a>
+
+    <!-- Portfolio Preview -->
+    <section class="section section--alternate">
+        <div class="container">
+            <div class="section-intro section-intro--center">
+                <span class="section-intro__eyebrow">Sélection</span>
+                <h2 class="section-intro__title">6 Projets à Découvrir</h2>
+                <p class="section-intro__lead">Une sélection de réalisations RavenArt, pensées comme des
+                    pièces fortes de notre univers audiovisuel.</p>
+            </div>
+
+            <div class="projects-showcase">
+                <article class="projects-showcase__item">
+                    <div class="projects-showcase__media-shell">
+                        <video class="projects-showcase__media" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="projects-showcase__tag">Campagne</span>
+                    <h3 class="projects-showcase__title">Maison de prestige</h3>
+                    <p class="projects-showcase__text">Film de marque construit autour du silence, de la
+                        matière et du contraste.</p>
+                    <a href="/projects.html" class="btn btn--secondary">Voir le projet</a>
+                </article>
+
+                <article class="projects-showcase__item">
+                    <div class="projects-showcase__media-shell">
+                        <video class="projects-showcase__media" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="projects-showcase__tag">Événement</span>
+                    <h3 class="projects-showcase__title">Gala corporate</h3>
+                    <p class="projects-showcase__text">Captation élégante avec narration documentaire et
+                        lumière sculptée.</p>
+                    <a href="/projects.html" class="btn btn--secondary">Voir le projet</a>
+                </article>
+
+                <article class="projects-showcase__item">
+                    <div class="projects-showcase__media-shell">
+                        <video class="projects-showcase__media" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="projects-showcase__tag">Portrait</span>
+                    <h3 class="projects-showcase__title">Série éditoriale</h3>
+                    <p class="projects-showcase__text">Portraits à forte présence visuelle pour dirigeantes
+                        et talents créatifs.</p>
+                    <a href="/projects.html" class="btn btn--secondary">Voir le projet</a>
+                </article>
+
+                <article class="projects-showcase__item">
+                    <div class="projects-showcase__media-shell">
+                        <video class="projects-showcase__media" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="projects-showcase__tag">Social</span>
+                    <h3 class="projects-showcase__title">Formats verticaux</h3>
+                    <p class="projects-showcase__text">Contenus mobiles premium pensés pour Instagram,
+                        TikTok et reels de marque.</p>
+                    <a href="/projects.html" class="btn btn--secondary">Voir le projet</a>
+                </article>
+
+                <article class="projects-showcase__item">
+                    <div class="projects-showcase__media-shell">
+                        <video class="projects-showcase__media" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="projects-showcase__tag">Mode</span>
+                    <h3 class="projects-showcase__title">Lookbook monochrome</h3>
+                    <p class="projects-showcase__text">Direction artistique sobre et précise pour une
+                        identité visuelle forte.</p>
+                    <a href="/projects.html" class="btn btn--secondary">Voir le projet</a>
+                </article>
+
+                <article class="projects-showcase__item">
+                    <div class="projects-showcase__media-shell">
+                        <video class="projects-showcase__media" controls preload="metadata" playsinline>
+                            <source src="/public/video-mobile/Ravenart-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <span class="projects-showcase__tag">Documentaire</span>
+                    <h3 class="projects-showcase__title">Regards croisés</h3>
+                    <p class="projects-showcase__text">Narration sensible, montage cinématographique et
+                        rythme contemplatif.</p>
+                    <a href="/projects.html" class="btn btn--secondary">Voir le projet</a>
+                </article>
+            </div>
         </div>
+    </section>
 
-        <div class="footer__section">
-          <h4>Contact</h4>
-          <p>Cotonou, Bénin</p>
-          <a href="mailto:contact@ravenart.bj">contact@ravenart.bj</a>
-          <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>RavenArt</h4>
+                    <p>Agence audiovisuelle premium basée au Bénin. Excellence cinématographique noir &
+                        blanc.</p>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Navigation</h4>
+                    <a href="/">Accueil</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/projects.html">Nos Projets</a>
+                    <a href="/about.html">À Propos</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contact</h4>
+                    <p>Cotonou, Bénin</p>
+                    <a href="mailto:contact@ravenart.bj">contact@ravenart.bj</a>
+                    <a href="tel:+229XXXXXXXX">+229 XX XX XX XX</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus
+                    Partners.</p>
+            </div>
         </div>
-      </div>
+    </footer>
 
-      <div class="footer__bottom">
-        <p class="footer__copyright">© 2026 RavenArt. Tous droits réservés. Développé par Nexus Partners.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

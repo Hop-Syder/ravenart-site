@@ -2,8 +2,20 @@ import './style.css';
 import { initAnimations } from './animations.js';
 
 // Mobile Navigation Toggle
+const navbar = document.querySelector('.navbar');
 const navbarToggle = document.querySelector('.navbar__toggle');
 const navbarMenu = document.querySelector('.navbar__menu');
+
+function syncNavbarHeight() {
+  if (!navbar) return;
+
+  document.documentElement.style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
+}
+
+syncNavbarHeight();
+
+window.addEventListener('resize', syncNavbarHeight);
+window.addEventListener('load', syncNavbarHeight);
 
 if (navbarToggle && navbarMenu) {
   navbarToggle.addEventListener('click', () => {
@@ -40,6 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Initialize cinematic animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+  syncNavbarHeight();
   initAnimations();
 });
 
